@@ -1,21 +1,86 @@
-.headerforuser{
-    width: 100%;
-    height:80px ;
-    background-color: rgb(211, 143, 189) ;
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10x;
+    background-color: #cdc4c4; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 20vh;
+  }
+  
+  .headerbrand h1 {
+    position: relative;
+    font-size: 44px;
+    margin:10px;
+    top: 5vh;
     
-}
-.cartname{
-    position:absolute;
-    color: white;
-    top:5px;
-    float:left ;
-}
-.cartpic{
-    position:absolute;
-    width: 70px;
-    top:10px;
-    float:left;
-    left:100px;
+    color: #333333; 
+  }
+  
+  .headerbrand img {
+    position:relative;
+    width: 80px; 
+    left:21vh;
+    top: -43px
+    
+  }
+  
+  .headerlinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .headerlinks ul li {
+    display: inline-block;
+    margin-right: 20px;
+    
+    
+ }
+  
+  .headerlinks ul li a {
+    text-decoration: none;
+    color: #333333; 
+    font-size:17px;
+    font-weight: 10vh;
+    cursor: pointer;
+    top: 5vh;
+  }
+  
+  .headerlinks ul li a:hover {
+    color: #06831a; 
+  }
+
+  .headerbuttons{
+    margin: 0 100px;
+  }
+  
+  .headerbuttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .headerbuttons .Bag {
+    background-color: #50773f; 
+    color: #ffffff; 
+  }
+
+  .headerbuttons .favourite {
+    background-color: #50773f; 
+    color: #ffffff;
+    margin-left: 10px; 
+  }
+  
+  .headerbuttons .favourite:hover {
+    background-color: #06831a;
+  }
+  .headerbuttons .Bag:hover {
+    background-color:  #06831a;
+  }
 
 
-}
+  
