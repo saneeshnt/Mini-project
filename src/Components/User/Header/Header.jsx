@@ -8,7 +8,7 @@ function Header() {
         <h1 >phoen!X</h1>
         
         <img className='pic'
-          src="https://i.postimg.cc/pLpXmhLh/download-removebg-preview-1.png"
+          src="https://i.postimg.cc/ZYLcyrDf/Photo-1707834659325.png"
           alt="img" />
 
       </div>
