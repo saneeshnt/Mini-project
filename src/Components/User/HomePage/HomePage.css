@@ -28,8 +28,20 @@
   .cartname{
     position: relative;
     font-size:50px;
-    font-weight: bold;
+    font-weight:bolder;
     color: #947faa;
-    top:-7vh;
+    top:-4vh;
   }
-  
+  .contents button{
+    position: relative;
+    width:50vh;
+    background-color: #947faa;
+    color:#ffffff;
+    margin-bottom: 10vh;
+    left: -3vh;
+
+  }
+  .contents button:hover{
+    opacity: 10px;
+    background-color: #18589d;
+  }

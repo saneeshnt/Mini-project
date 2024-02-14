@@ -19,6 +19,7 @@
   .headerbrand img {
     position:relative;
     width:100px; 
+    height: 100px;
     left:21vh;
     top: -45px
     
@@ -48,38 +49,49 @@
   }
   
   .headerlinks ul li a:hover {
-    color: #06831a; 
+    color: #18589d; 
   }
 
-  .headerbuttons{
-    margin: 0 100px;
-  }
-  
-  .headerbuttons button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .headerbuttons .Bag {
-    background-color: #50773f; 
-    color: #ffffff; 
-  }
+  /* HeaderButtons.css */
 
-  .headerbuttons .favourite {
-    background-color: #50773f; 
-    color: #ffffff;
-    margin-left: 10px; 
-  }
-  
-  .headerbuttons .favourite:hover {
-    background-color: #06831a;
-  }
-  .headerbuttons .Bag:hover {
-    background-color:  #06831a;
-  }
+.headerbuttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.headerbuttons button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headerbuttons button:hover {
+  background-color: #18589d;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.headerbuttons .wishlist {
+  background-color: #4a81b8;
+  color: #ffffff;
+}
+
+
+
+.headerbuttons .favourite {
+  background-color: #4a81b8;
+  color: #ffffff;
+  margin-right: 100px;
+
+}
 
 
   
+   

@@ -1,0 +1,70 @@
+.signup-page h1{
+    color: #947faa;
+
+}
+.signup-page {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .brandlogo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    /* margin-bottom: 20px; */
+    left: 6vh;
+    
+  }
+  
+  .signup-form {
+    align-items: center;
+    width: 250px;
+    padding:40px ;
+    background-color:#ffffff;
+    border: 1px dotted #947faa;
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px #947faa;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    font-family: 'Lucida Sans  ';
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding:10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-group input:focus {
+    outline:none;
+    border-color:  #947faa;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  
+  button {
+    width: 60%;
+    padding: 10px;
+    margin-left: 50px;
+    background-color: #fbfdfa;
+    color: rgb(4, 4, 4);
+    border: 1px dotted  #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: #947faa;
+  }
+  

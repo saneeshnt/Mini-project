@@ -3,13 +3,13 @@ import './Header.css'
 
 function Header() {
   return (
-    <div className='Header'>
+    <><div className='Header'>
       <div className='headerbrand'>
-        <h1 >phoen!X</h1>
-        
-        <img className='pic'
+        <h1 >phone!X</h1>
+
+        <img className='brandlogo'
           src="https://i.postimg.cc/ZYLcyrDf/Photo-1707834659325.png"
-          alt="img" />
+          alt="brandlogo" />
 
       </div>
       <div className='headerlinks'>
@@ -23,12 +23,12 @@ function Header() {
       </div>
       <div className='headerbuttons'>
 
-        <button className='Bag'>Bag</button>
-        <button className='favourite'>Fav</button>
-      </div></div>
+        <button className='wishlist' >WishList</button>
+        <button className='favourite' >Fav</button>
+      </div></div></>
 
-      )
+  )
 
 }
 
-      export default Header
+export default Header

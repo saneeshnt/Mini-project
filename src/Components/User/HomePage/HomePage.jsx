@@ -14,7 +14,8 @@ function HomePage() {
       </div>
       <div className='contents'>
         <h2 className='welcome'>WELCOME TO</h2>
-        <h1 className='cartname'>phoen!X</h1>
+        <h1 className='cartname'>phone!X</h1>
+        <button >SHOP NOW</button>
       </div>
 
     </div></>
