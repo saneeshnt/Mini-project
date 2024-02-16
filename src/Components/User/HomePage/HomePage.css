@@ -4,19 +4,20 @@
   
   .ads {
     display: flex;
+    margin:0vh 0vh;
     justify-content: center;
     align-items:center;
     flex-wrap:wrap;
   }
   
-  .img1,.img2,.img3 {
-    width:65vh;
-    height:30vh;
-    margin:1px;
+  .img1,.img2 {
+    width:101vh;
+    height:50vh;
+    margin:0px 1px;
 ;
   }
   
-  .contents {
+  /* .contents {
     margin: 20px 50px;
   }
   
@@ -44,4 +45,4 @@
   .contents button:hover{
     opacity: 10px;
     background-color: #18589d;
-  }
+  } */

@@ -9,7 +9,7 @@ function SignupPage() {
       <h1>Sign Up</h1>
       <div className='signup-form'>
       <form >
-      <img className='brandlogo' src="https://i.postimg.cc/ZYLcyrDf/Photo-1707834659325.png" alt="brandlogo" />
+      <img className='brand-logo' src="https://i.postimg.cc/Pr8Bpgst/Screenshot-2024-02-16-161718-removebg-preview.png" alt="brandlogo" />
         <br/>
         <div className='form-group'>
         <label htmlFor='fullName'>Full Name: </label>

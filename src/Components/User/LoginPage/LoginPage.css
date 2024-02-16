@@ -1,5 +1,5 @@
 .login-page h1{
-    color: #947faa;
+    color: #010101;
 }
 
 .login-page {
@@ -16,7 +16,7 @@
     background-color:#ffffff;
     border: 1px dotted #000000;
     border-radius: 30px;
-    box-shadow: 0px 10px 10px #947faa;
+    box-shadow: 0px 10px 10px #000000;
   }
   
   .form-group {
@@ -34,13 +34,13 @@
     width: calc(100% - 10px);
     margin-bottom: 10px;
     padding:10px;
-    border: 1px solid #000000;
+    border: 1px solid #3d3939;
     border-radius: 5px;
     transition: border-color 0.3s ease-in-out;
   }
   .form-group input:focus {
     outline:none;
-    border-color: #947faa;
+    border-color:rgb(0, 0, 0);
   }
   button {
     width: 60%;
@@ -55,14 +55,15 @@
   }
   
   button:hover {
-    background-color: #947faa;
+    background-color:#000000;
+    color: #ffffff;
   }
   
-  .brandlogo {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    /* margin-bottom: 20px; */
-    left: 6vh;
+  .brand-logo {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    left: 10vh;
     
   }

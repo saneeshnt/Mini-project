@@ -1,47 +1,43 @@
 .Header {
+    position:relative;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 10x;
-    background-color: #947faa; 
-    box-shadow: 0 2px 4px rgba(42, 40, 40, 0.1);
-    height: 15vh;
+    background-color: #ffffff; 
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.1);
+    height:13vh;
+    margin: 0vh 0vh;
   }
   
-  .headerbrand h1 {
-    position: relative;
-    font-size: 44px;
-    margin:10px;
-    top: 5vh;
-    color: #ffffff; 
-  }
   
-  .headerbrand img {
+  .headerbrand .brand-name {
     position:relative;
-    width:100px; 
-    height: 100px;
-    left:21vh;
-    top: -45px
+    width:150px; 
+    height: 90px;
+    left:10vh;
+    top:2px;
     
   }
   
   .headerlinks ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    
+    padding:0;
+    margin-left:30vh; 
+    margin-right: -45px;   
   }
   
   .headerlinks ul li {
-    display: inline-block;
-    margin-right: 20px;
+    display:inline-block;
+    margin:10px;
     
     
  }
   
   .headerlinks ul li a {
     text-decoration: none;
-    color: #ffffff; 
+    color: #000000; 
     font-size:17px;
     font-weight: 10vh;
     cursor: pointer;
@@ -49,48 +45,63 @@
   }
   
   .headerlinks ul li a:hover {
-    color: #18589d; 
+    color: #044081; 
+  }
+  /* header-search */
+  .headersearch {
+    display: flex;
+    align-items: center;
+  }
+  
+  .headersearch input[type="text"] {
+    position: relative;
+    padding: 6px;
+    right:-5vh;
+    border:.5px solid;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .headersearch button {
+    position: relative;
+    padding: 6px;
+    background-color:#ffffff;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .headersearch button:hover {
+    background-color: white;
+    color: #044081;
   }
 
-  /* HeaderButtons.css */
+  /* Header-icons.css */
+  .header-icons{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    right: 3%;
+  }
+  
+  .header-icons > * {
+    padding: 5px;
+    font-size:20px;
+    margin-right: 2vh;
+    color: #000000;
+  }
+  
+  .header-icons > *:hover {
+    color: #044081;
+  }
+    .heart-icon:hover{
+      color: #de0606;
 
-.headerbuttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.headerbuttons button {
-  padding: 10px 10px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 10px;
-  font-weight: bold;
-  /* text-transform: uppercase; */
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.headerbuttons button:hover {
-  background-color: #18589d;
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.headerbuttons .wishlist {
-  background-color: #4a81b8;
-  color: #ffffff;
-}
-
-
-
-.headerbuttons .favourite {
-  background-color: #4a81b8;
-  color: #ffffff;
-  margin-right: 100px;
-
-}
+    }
+  
 
 
   

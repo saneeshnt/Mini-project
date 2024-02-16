@@ -11,12 +11,14 @@ function HomePage() {
           alt="ads2" />
         <img className='img3' src="https://i.postimg.cc/MK1sjFvk/Realme-X2-Pro-rear-quad-camera-assembly.jpg"
           alt="ads3" />
+          <img className='img4' src="https://i.postimg.cc/hGyxxtHw/istockphoto-1163987892-170667a.webp" 
+          alt="ads4" />
       </div>
-      <div className='contents'>
+      {/* <div className='contents'>
         <h2 className='welcome'>WELCOME TO</h2>
         <h1 className='cartname'>phone!X</h1>
         <button >SHOP NOW</button>
-      </div>
+      </div> */}
 
     </div></>
   )
