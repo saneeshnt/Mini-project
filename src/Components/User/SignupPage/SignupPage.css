@@ -1,5 +1,6 @@
 .signup-page h1{
     color: #000000;
+    font-family: math;
 
 }
 .signup-page {
@@ -21,11 +22,12 @@
   .signup-form {
     align-items: center;
     width: 250px;
+    /* height: 500px; */
     padding:40px ;
     background-color:#ffffff;
-    border: 1px dotted #000000;
-    border-radius: 30px;
-    box-shadow: 0px 10px 10px #000000;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    /* box-shadow: 0px 10px 10px #000000; */
   }
   .form-group label {
     display: block;
@@ -33,9 +35,9 @@
   }
   
   .form-group input {
-    font-family: 'Lucida Sans  ';
+    font-family:math;
     width: calc(100% - 10px);
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     padding:10px;
     border: 1px solid #3d3939;
     border-radius: 5px;
@@ -52,12 +54,12 @@
   
   
   button {
-    width: 60%;
-    padding: 10px;
-    margin-left: 50px;
+    width: 100px;
+    padding:10px;
+    margin-left: 70px;
     background-color: #fbfdfa;
     color: rgb(0, 0, 0);
-    border: 1px dotted  #000000;
+    border: 1px solid  #000000;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -65,7 +67,7 @@
   }
   
   button:hover {
-    background-color: #000000;
+    background-color: #5e5555;
     color: #ffffff;
   }
   
