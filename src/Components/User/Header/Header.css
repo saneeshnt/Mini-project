@@ -8,7 +8,7 @@
     background-color: #ffffff; 
     box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
     height:13vh;
-    margin:5px 2px;
+    margin:5px 0px;
   }
   
   
@@ -56,7 +56,7 @@
   .headersearch input[type="text"] {
     position: relative;
     padding: 6px;
-    right:-5vh;
+    right:-18vh;
     border:.5px solid;
     border-radius: 20px;
     outline: none;
@@ -71,6 +71,8 @@
     color: rgb(0, 0, 0);
     cursor: pointer;
     outline: none;
+    width: auto;
+    right: -10vh;
   }
   
   .headersearch button:hover {
@@ -84,13 +86,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    right: 3%;
+    right: -15vh;
   }
   
   .header-icons > * {
     padding: 5px;
     font-size:20px;
-    margin-right: 2vh;
     color: #000000;
   }
   
@@ -101,8 +102,21 @@
       color: #de0606;
 
     }
-  
-
-
+  .signup-button button {
+    position: relative;
+    right: 4vh;
+    width:auto;
+  }
+.signup-button button:hover{
+  background-color: #ffffff;
+  color: #044081;
+}
+.signup-button a {
+  text-decoration: none;
+  color: #000000; 
+  font-size:auto;
+  font-weight: auto;
+  cursor: pointer;
+}
   
    

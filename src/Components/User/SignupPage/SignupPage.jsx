@@ -42,7 +42,7 @@ function SignupPage() {
   };
 
   return (
-    <div className='signup-page'>
+   <><div className='signup-page'>
       <h1>Sign Up</h1>
       <div className='signup-form'>
         {error && <div className="error-message">{error}</div>}
@@ -97,6 +97,14 @@ function SignupPage() {
         </form>
       </div>
     </div>
+    
+    <div className='right-side'>
+      <p>
+      If you already have an phone!X account? 
+      
+        <a href="/login">Login </a>
+      </p>
+      </div></> 
   );
 }
 

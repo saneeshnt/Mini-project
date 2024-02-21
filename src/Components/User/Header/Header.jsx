@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch,faShoppingCart, faUser, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faSearch,faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
 import './Header.css'; 
 
 function Header() {
@@ -11,10 +11,10 @@ function Header() {
         alt="brand-name" />
       </div>
       <div className='headerlinks'>
-        <ul><li><a>Latest</a></li>
-          <li><a>Brands</a></li>
-          <li><a>Categories</a></li>
-          <li><a>Support</a></li>
+        <ul><li><a href='/new'>New Arrivals</a></li>
+          <li><a href='/brands'>Brands</a></li>
+          <li><a href='/categories'>Categories</a></li>
+          <li><a href='/support'>Support</a></li>
 
         </ul>
 
@@ -28,9 +28,11 @@ function Header() {
       <div className='header-icons'>
       <FontAwesomeIcon icon={faShoppingCart} />
         <FontAwesomeIcon className='heart-icon' icon={faHeart} />
-        <FontAwesomeIcon icon={faUser} />
 
         
+      </div>
+      <div className='signup-button'>
+           <button><a href="/signup">SignUp</a></button>
       </div>
       </div></>
 
