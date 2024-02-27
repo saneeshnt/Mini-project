@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch,faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
 import './Header.css'; 
@@ -26,13 +27,14 @@ function Header() {
       </div>
       
       <div className='header-icons'>
+      <Link to="/cart" className="action-link">
       <FontAwesomeIcon icon={faShoppingCart} />
-        <FontAwesomeIcon className='heart-icon' icon={faHeart} />
-
-        
+      </Link>
       </div>
       <div className='signup-button'>
-           <button><a href="/signup">SignUp</a></button>
+      <Link to="/signup" className="action-link">
+           <button>SignUp</button>
+      </Link>
       </div>
       </div></>
 

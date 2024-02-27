@@ -98,25 +98,18 @@
   .header-icons > *:hover {
     color: #044081;
   }
-    .heart-icon:hover{
+    /* .heart-icon:hover{
       color: #de0606;
 
-    }
+    } */
   .signup-button button {
     position: relative;
     right: 4vh;
     width:auto;
   }
 .signup-button button:hover{
-  background-color: #ffffff;
-  color: #044081;
+  background-color: #302c2c;
+  color: #dce0e4;
 }
-.signup-button a {
-  text-decoration: none;
-  color: #000000; 
-  font-size:auto;
-  font-weight: auto;
-  cursor: pointer;
-}
-  
+
    

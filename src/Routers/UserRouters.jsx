@@ -7,6 +7,7 @@ import UserNewArrivals from '../Pages/User/UserNewArrivals';
 import UserCategories from '../Pages/User/UserCategories';
 import UserBrands from '../Pages/User/UserBrands';
 import UserSupport from '../Pages/User/UserSupport';
+import UserCart from '../Pages/User/UserCart';
 
 function UserRouters() {
   return (
@@ -19,6 +20,8 @@ function UserRouters() {
             <Route path="/categories" element={<UserCategories/>}/>
             <Route path="/brands" element={<UserBrands/>}/>
             <Route path="/support" element={<UserSupport/>}/>
+            <Route path="/cart" element={<UserCart/>}/>
+
 
 
         </Routes>
