@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch,faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faSearch,faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
 import './Header.css'; 
 
 function Header() {
   return (
     <><div className='Header'>
       <div className='headerbrand'>
-      <h1 className='brand-name'>PHONEIX</h1>
+      <h1 className='brand-name'>PHONE!X</h1>
       </div>
       <div className='headerlinks'>
         <ul>
+        <Link to='/'><li>HOME</li></Link>
           <Link to='/new'><li>NEW ARRIVALS</li></Link>
           <Link to='/brands'><li>BRANDS</li></Link>
           <Link to='/categories'><li>CATEGORIES</li></Link>
@@ -21,16 +22,8 @@ function Header() {
 
       </div>
 
-      <div className='headersearch'>
-        <input type="text" placeholder="Search..." />
-        <button><FontAwesomeIcon icon={faSearch} /></button>
-      </div>
       
-      <div className='header-icons'>
-      <Link to="/cart" className="action-link">
-      <FontAwesomeIcon icon={faShoppingCart} />
-      </Link>
-      </div>
+     
       <div className='signup-button'>
       <Link to="/signup" className="action-link">
            <button className='btn'>SignUp</button>

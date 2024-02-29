@@ -8,7 +8,7 @@ function Header() {
   return (
     <><div className='Header'>
       <div className='headerbrand'>
-      <h1 className='brand-name'>PHONEIX</h1>
+      <h1 className='brand-name'>PHONE!X</h1>
       </div>
       <div className='headerlinks'>
         <ul>

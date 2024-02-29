@@ -1,6 +1,6 @@
 import React from 'react'
 import './NewArrivals.css'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function NewArrivals() {
   return (
     <>
@@ -35,8 +35,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
 
         </div>
 
@@ -59,8 +63,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
 
         </div>
 
@@ -83,8 +91,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
 
         </div>
 
@@ -107,8 +119,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
 
         </div>
 
@@ -131,8 +147,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
 
         </div>
 
@@ -155,9 +175,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
-
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
         </div>
 
         {/* card7 */}
@@ -179,8 +202,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
 
         </div>
 
@@ -203,9 +230,12 @@ function NewArrivals() {
 
           </div>
           <div className="addtocart-btn">
-            <button type="submit">Add to Cart</button>
-          </div>
-
+            <Link to="#">
+               <button type="submit">
+                Add to Cart
+               </button>
+             </Link>
+           </div>
         </div>
 
       </div>

@@ -47,6 +47,7 @@
 }
 .product-img img{
   width:100%;
+  
 
 }
 .product-info{
@@ -90,17 +91,17 @@
   font-family: math;
   font-size: 1em;
   letter-spacing: 0.02em;
-  color: #1844ee;
+  color:#044081;
   width: 265px;
   height: 40px;
   background-color: white;
-  border: 0.5px solid blue;
+  border: 0.5px solid #044081;
   cursor: pointer;
 }
 
 .addtocart-btn button:hover {
   /* transform: scale(1.01); */
-  background-color: #133cdf;
+  background-color:#044081;
   color: #ffffff;
  
 }
