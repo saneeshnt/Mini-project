@@ -6,26 +6,29 @@
 .signup-page {
     display: flex;
     flex-direction:column;
+    justify-content: center;
     align-items: center;
     margin-top: 30px;
     /* margin: left 5px   */
   }
+
+  .brand-logo{
+    margin: 10px 75px;
+  }
   
-  .brand-logo {
-    position: relative;
+  .logo {
     width: 100px;
     height: 100px;
-    margin-bottom: 20px;
-    left: 10vh;
+    margin: -10px 50px;
     
   }
   
   .signup-form {
     position: relative;
     align-items: center;
-    width: 250px;
-    
-    padding:40px ;
+    width: 350px;
+    height:60vh;
+    padding:50px  ;
     background-color:#ffffff;
     border: 1px solid #000000;
     border-radius: 0px;
@@ -38,7 +41,7 @@
     width: calc(100% - 10px);
     /* margin-bottom: 10px; */
     padding:10px;
-    border: 1px solid #3d3939;
+    border: 1px solid #9d9393;
     border-radius: 5px;
     transition: border-color 0.3s ease-in-out;
   }
@@ -48,14 +51,14 @@
     border-color:  #000000;
   }
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   
   
-  button {
+  .signup-btn button {
     width: 100px;
     padding:10px;
-    margin-left: 70px;
+    margin:-5px 127px;
     background-color: #fbfdfa;
     color: rgb(0, 0, 0);
     border: 1px solid  #000000;
@@ -65,21 +68,22 @@
     display: inline-block;
   }
   
-  button:hover {
+  .signup-btn button:hover {
     background-color: #5e5555;
     color: #ffffff;
   }
   
-  .right-side{
-    float: right;
-    position: absolute;
-    right:19vh;
-    top: 40vh;
+  .login-p{
+    position: relative;
+    margin: 0px 30px;
+   
     
   }
-  .right-side p a{
+  .login-link{
+    list-style: none;
+    position: relative;
     font-family: math;
     font-size:3vh;
-    color: #000000;
-
+    color: #0f0cb2;
+    margin:-20px 145px ;
   }

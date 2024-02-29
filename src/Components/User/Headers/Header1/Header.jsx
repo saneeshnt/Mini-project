@@ -8,14 +8,14 @@ function Header() {
   return (
     <><div className='Header'>
       <div className='headerbrand'>
-       <img className='brand-name' src="https://i.postimg.cc/KcNq30wK/Screenshot-2024-02-16-161534-removebg-preview.png"
-        alt="brand-name" />
+      <h1 className='brand-name'>PHONEIX</h1>
       </div>
       <div className='headerlinks'>
-        <ul><li><a href='/new'>New Arrivals</a></li>
-          <li><a href='/brands'>Brands</a></li>
-          <li><a href='/categories'>Categories</a></li>
-          <li><a href='/support'>Support</a></li>
+        <ul>
+          <Link to='/new'><li>NEW ARRIVALS</li></Link>
+          <Link to='/brands'><li>BRANDS</li></Link>
+          <Link to='/categories'><li>CATEGORIES</li></Link>
+          <Link to='/support'><li>SUPPORT</li></Link>
 
         </ul>
 
@@ -33,10 +33,11 @@ function Header() {
       </div>
       <div className='signup-button'>
       <Link to="/signup" className="action-link">
-           <button>SignUp</button>
+           <button className='btn'>SignUp</button>
       </Link>
       </div>
-      </div></>
+      </div>
+      </>
 
   )
 

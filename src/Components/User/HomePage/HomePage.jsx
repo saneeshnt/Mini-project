@@ -1,5 +1,7 @@
 import React from 'react'
 import "./HomePage.css"
+import { Link } from 'react-router-dom';
+
 
 function HomePage() {
   return (
@@ -19,8 +21,9 @@ function HomePage() {
        
       </div>
       <div  className='buttons'>
-        
+        <Link to='/new'>
         <button className='explore-button' >explore now</button>
+        </Link>
       </div>
 
     </div>

@@ -8,20 +8,31 @@
     align-items: center;
     margin-top: 30px;
   }
+  .brand-logo{
+    margin: 20px 70px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin: -10px 150px;
+    
+  }
   
   .login-form {
+    position: relative;
     align-items: center;
-    width: 250px;
-    /* height: 500px; */
-    padding:40px ;
+    width: 350px;
+    height:45vh;
+    padding:50px  ;
     background-color:#ffffff;
     border: 1px solid #000000;
-    border-radius:0px;
+    border-radius: 0px;
     /* box-shadow: 0px 10px 10px #000000; */
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .form-group label {
@@ -43,28 +54,34 @@
     outline:none;
     border-color:rgb(0, 0, 0);
   }
-  button {
-    width:100px;
-    margin-left: 50px;
-    padding: 10px;
+  .login-btn button {
+    width: 100px;
+    padding:10px;
+    margin:-5px 127px;
     background-color: #fbfdfa;
     color: rgb(0, 0, 0);
-    border: 1px solid #000000;
+    border: 1px solid  #000000;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    display: inline-block;
   }
   
-  button:hover {
-    background-color:#332e2e;
+  .login-btn button:hover {
+    background-color: #5e5555;
     color: #ffffff;
   }
   
-  .brand-logo {
-    position:relative;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-    left: 10vh;
+  .signup-p{
+    position: relative;
+    margin: 0px 30px;
+   
     
+  }
+  .signup-link{
+    position: relative;
+    font-family: math;
+    font-size:3vh;
+    color: #0f0cb2;
+    margin:-20px 140px ;
   }

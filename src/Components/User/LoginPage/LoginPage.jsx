@@ -1,5 +1,6 @@
 import React from 'react';
 import "./LoginPage.css";
+import {Link} from "react-router-dom"
 
 function LoginPage() {
   // Function to handle form submission
@@ -10,10 +11,13 @@ function LoginPage() {
   };
 
   return (
-    <div className="login-page">
+   <> <div className="login-page">
       <h1>Log In</h1>
-      <form className="login-form" onSubmit={handleSubmit}>
-        <img className='brand-logo' src="https://i.postimg.cc/Pr8Bpgst/Screenshot-2024-02-16-161718-removebg-preview.png" alt="brandlogo" />
+      <div  className="login-form" >
+      <form onSubmit={handleSubmit}>
+        <div className='brand-logo'>
+        <img className='logo' src="https://i.postimg.cc/Pr8Bpgst/Screenshot-2024-02-16-161718-removebg-preview.png" alt="brandlogo" />
+        </div>
         <div className="form-group">
           <input
             type="text"
@@ -32,9 +36,21 @@ function LoginPage() {
             required
           />
         </div>
-        <button type="submit">Log in</button>
+        <div className='login-btn'>
+        <button type="submit">Log in</button> 
+        </div>
       </form>
+      <div className='signup-p'>
+         <p>If you don't have an phone!X account?</p> 
+        </div>
+       <div className='signup-link'>
+           <Link to="/signup">
+            <h4>SignUp</h4>
+            </Link>
+       </div>
+       </div>
     </div>
+    </>
   );
 }
 
