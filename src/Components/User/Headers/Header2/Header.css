@@ -23,6 +23,9 @@
     padding:0;
     margin: 0px 5px; 
     font-family: monospace;
+    position: relative;
+    right: 40em;
+
     
    }
   
@@ -43,7 +46,7 @@
   .headerlinks ul li:hover {
     color: #044081; 
   }
-
+/* 
   .signup-button .btn {
     position: relative;
     right: 4vh;
@@ -60,6 +63,6 @@
 .signup-button .btn:hover{
   background-color: #1e1c1c;
   color: #dce0e4;
-}
+} */
 
    

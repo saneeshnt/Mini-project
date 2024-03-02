@@ -24,11 +24,11 @@ function Header() {
 
       
      
-      <div className='signup-button'>
+      {/* <div className='signup-button'>
       <Link to="/signup" className="action-link">
            <button className='btn'>SignUp</button>
       </Link>
-      </div>
+      </div> */}
       </div>
       </>
 

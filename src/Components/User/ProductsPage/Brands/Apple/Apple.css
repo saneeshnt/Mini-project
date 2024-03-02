@@ -49,6 +49,12 @@
   letter-spacing: 0.05em;
   color:#101214
 }
+.product-title h1 {
+  font-size: 4vh;
+  letter-spacing: 2px;
+  font-family: system-ui;
+  color: #044081;
+}
 .product-price {
   margin-top: 5px;
   left:1em;

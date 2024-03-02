@@ -1,8 +1,6 @@
 
 .card-container{
-
-
-    padding: 30px 50px;
+  padding: 30px 50px;
     }
    .product-card{
     background-color: rgb(255, 255, 255);
@@ -48,6 +46,12 @@
     line-height:2em;
     letter-spacing: 0.05em;
     color:#101214
+  }
+  .product-title h1 {
+    font-size: 4vh;
+    letter-spacing: 2px;
+    font-family: system-ui;
+    color: #044081;
   }
   .product-price {
     margin-top: 5px;
