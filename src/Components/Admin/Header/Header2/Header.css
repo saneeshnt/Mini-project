@@ -18,36 +18,34 @@
     color: #044081;
   }
   
-  .headerlinks2 ul {
+  /* .headerlinks2 ul {
     list-style: none;
     padding:0;
     margin: 0px 5px; 
     font-family: monospace;
     position: relative;
     right: 40em;
-    display: flex;
-
 
     
    }
   
-  .headerlinks2 ul li {
+  .headerlinks ul li {
     display:inline-block;
-    margin:0px 10px;
+    margin:10px;
     
     
  }
   
-  .headerlinks2 ul li {
+  .headerlinks ul li {
     color: #373030; 
     font-size:17px;
     font-weight: 10vh;
     cursor: pointer;
   }
   
-  .headerlinks2 ul li:hover {
+  .headerlinks ul li:hover {
     color: #044081; 
-  }
+  } */
 /* 
   .signup-button .btn {
     position: relative;

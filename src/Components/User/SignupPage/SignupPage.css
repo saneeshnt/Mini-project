@@ -11,24 +11,29 @@
     margin-top: 30px;
     /* margin: left 5px   */
   }
-
-  .brand-logo{
-    margin: 10px 75px;
-  }
   
-  .logo {
-    width: 100px;
-    height: 100px;
-    margin: -10px 50px;
-    
-  }
+  .brand-name {
+    margin: 0px 22px;
+    font-weight: 20px;
+    letter-spacing: 10px;
+    padding: 0px 45px;
+    text-decoration: none;
+}
+   .brand-name h1{
+    color: #044081;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+   }
+
+
+ 
   
   .signup-form {
     position: relative;
     align-items: center;
     width: 350px;
     height:60vh;
-    padding:50px  ;
+    padding:25px 50px  ;
     background-color:#ffffff;
     border: 1px solid #000000;
     border-radius: 0px;

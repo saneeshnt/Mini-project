@@ -1,0 +1,51 @@
+.Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10x;
+    background-color: #ffffff; 
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+    height:10vh;
+    margin:5px 0px;
+  }
+  
+  
+  .headerbrand .brand-name{
+   margin: 0px 30px;
+   font-weight:20px;
+   letter-spacing:10px;
+   text-decoration:none;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+
+a{
+  text-decoration: none;
+}
+  .admin-headerlinks ul {
+    list-style: none;
+    padding: 45px;
+    margin: 0px 10px;
+    font-family: monospace;
+    position: relative;
+    right:30em;
+}
+  
+  .admin-headerlinks ul li {
+    display:inline-block;
+    margin:10px;
+    
+    
+ }
+  
+  .admin-headerlinks ul li {
+    color: #373030; 
+    font-size:17px;
+    font-weight: 10vh;
+    cursor: pointer;
+  }
+  
+  .admin-headerlinks ul li:hover {
+    color: #044081; 
+  }

@@ -8,7 +8,9 @@ function Header() {
   return (
     <><div className='Header'>
       <div className='headerbrand'>
+        <Link to="/">
       <h1 className='brand-name'>PHONE!X</h1>
+      </Link>
       </div>
       <div className='headerlinks'>
         <ul>

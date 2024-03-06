@@ -11,19 +11,26 @@
   }
   
   
-  .headerbrand .brand-name {
+  .headerbrand .brand-name{
    margin: 0px 30px;
    font-weight:20px;
-    letter-spacing:10px;
+   letter-spacing:10px;
+   text-decoration:none;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
   }
-  
+
+a{
+  text-decoration: none;
+}
   .headerlinks ul {
     list-style: none;
-    padding:0;
-    margin: 0px 5px; 
+    padding: 45px;
+    margin: 0px 10px;
     font-family: monospace;
-    
-   }
+    position: relative;
+    right:0em;
+}
   
   .headerlinks ul li {
     display:inline-block;
@@ -54,7 +61,7 @@
     border:.5px solid;
     border-radius: 20px;
     outline: none;
-    margin: 0px 5px;
+    margin: 0px 0px;
   }
   
   .headersearch button {

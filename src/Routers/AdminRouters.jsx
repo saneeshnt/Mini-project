@@ -12,6 +12,8 @@ function AdminRouters() {
             <Route  path="/admin/*" element={<AdminHome />}/>
             <Route exact path="/login" element={<AdminLogin />}/>
             <Route path="/editProduct" element={<AdminEditProducts/>}/>
+            <Route path="/home" element={<AdminHome/>}/>
+
         </Routes>
     </div>
   )

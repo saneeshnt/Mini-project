@@ -12,7 +12,9 @@ function Header() {
       <h1 className='brand-name'>PHONE!X</h1>
       </Link>
       </div>
-      <div className='headerlinks2'>
+      
+      
+      {/* <div className='headerlinks2'>
         <ul>
        
           <Link to='/new'><li>NEW ARRIVALS</li></Link>
@@ -22,7 +24,7 @@ function Header() {
 
         </ul>
 
-      </div>
+      </div> */}
 
       
      

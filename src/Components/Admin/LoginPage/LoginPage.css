@@ -1,0 +1,90 @@
+.login-page h1{
+    color: #010101;
+}
+
+.login-page {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .brand-name {
+    margin: 0px 22px;
+    font-weight: 20px;
+    letter-spacing: 10px;
+    padding: 0px 45px;
+    text-decoration: none;
+}
+   .brand-name h1{
+    color: #044081;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+   }
+
+  
+   .login-form {
+    position: relative;
+    align-items: center;
+    width: 350px;
+    height: 45vh;
+    padding: 25px 50px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    /* box-shadow: 0px 10px 10px #000000; */
+}
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    /* color:  #947faa; */
+  }
+  
+  .form-group input {
+    font-family: 'Lucida Sans  ';
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding:10px;
+    border: 1px solid #3d3939;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  .form-group input:focus {
+    outline:none;
+    border-color:rgb(0, 0, 0);
+  }
+  .login-btn button {
+    width: 100px;
+    padding:10px;
+    margin:-5px 127px;
+    background-color: #fbfdfa;
+    color: rgb(0, 0, 0);
+    border: 1px solid  #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block;
+  }
+  
+  .login-btn button:hover {
+    background-color: #044081;
+    color: #ffffff;
+  }
+  
+  .signup-p{
+    position: relative;
+    margin: 0px 30px;
+   
+    
+  }
+  .signup-link{
+    position: relative;
+    font-family: math;
+    font-size:3vh;
+    color: #0f0cb2;
+    margin:-20px 140px ;
+  }

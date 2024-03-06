@@ -12,11 +12,11 @@ function LoginPage() {
 
   return (
    <> <div className="login-page">
-      <h1>Log In</h1>
+      <h1>Log in</h1>
       <div  className="login-form" >
       <form onSubmit={handleSubmit}>
-        <div className='brand-logo'>
-        <img className='logo' src="https://i.postimg.cc/Pr8Bpgst/Screenshot-2024-02-16-161718-removebg-preview.png" alt="brandlogo" />
+        <div className='brand-name'>
+          <h1>PHONE!X</h1>
         </div>
         <div className="form-group">
           <input

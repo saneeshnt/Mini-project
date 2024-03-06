@@ -8,28 +8,31 @@
     align-items: center;
     margin-top: 30px;
   }
-  .brand-logo{
-    margin: 20px 70px;
-  }
+  .brand-name {
+    margin: 0px 22px;
+    font-weight: 20px;
+    letter-spacing: 10px;
+    padding: 0px 45px;
+    text-decoration: none;
+}
+   .brand-name h1{
+    color: #044081;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+   }
+
   
-  .logo {
-    width: 100px;
-    height: 100px;
-    margin: -10px 150px;
-    
-  }
-  
-  .login-form {
+   .login-form {
     position: relative;
     align-items: center;
     width: 350px;
-    height:45vh;
-    padding:50px  ;
-    background-color:#ffffff;
+    height: 45vh;
+    padding: 25px 50px;
+    background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 0px;
     /* box-shadow: 0px 10px 10px #000000; */
-  }
+}
   
   .form-group {
     margin-bottom: 10px;
