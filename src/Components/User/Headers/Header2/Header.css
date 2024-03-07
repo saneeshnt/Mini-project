@@ -1,4 +1,4 @@
-.Header2 {
+.Header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@
     color: #044081;
   }
   
-  .headerlinks2 ul {
+  .headerlinks ul {
     list-style: none;
     padding:0;
     margin: 0px 5px; 
@@ -31,40 +31,22 @@
     
    }
   
-  .headerlinks2 ul li {
+  .headerlinks ul li {
     display:inline-block;
     margin:0px 10px;
     
     
  }
   
-  .headerlinks2 ul li {
+  .headerlinks ul li {
     color: #373030; 
     font-size:17px;
     font-weight: 10vh;
     cursor: pointer;
   }
   
-  .headerlinks2 ul li:hover {
+  .headerlinks ul li:hover {
     color: #044081; 
   }
-/* 
-  .signup-button .btn {
-    position: relative;
-    right: 4vh;
-    width:auto;
-    padding: 5px;
-
-    background-color: #fbfdfa;
-    color: rgb(0, 0, 0);
-    border: 1px solid  #000000;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-.signup-button .btn:hover{
-  background-color: #1e1c1c;
-  color: #dce0e4;
-} */
 
    

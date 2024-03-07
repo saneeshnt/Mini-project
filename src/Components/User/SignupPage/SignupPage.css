@@ -1,6 +1,5 @@
 .signup-page h1{
     color: #000000;
-    font-family: math;
 
 }
 .signup-page {
@@ -32,7 +31,7 @@
     position: relative;
     align-items: center;
     width: 350px;
-    height:60vh;
+    height:65vh;
     padding:25px 50px  ;
     background-color:#ffffff;
     border: 1px solid #000000;
@@ -46,14 +45,14 @@
     width: calc(100% - 10px);
     /* margin-bottom: 10px; */
     padding:10px;
-    border: 1px solid #9d9393;
+    border: 1px solid black;
     border-radius: 5px;
     transition: border-color 0.3s ease-in-out;
   }
   
   .form-group input:focus {
     outline:none;
-    border-color:  #000000;
+    border-color:  #044081;
   }
   .form-group {
     margin-bottom: 5px;
@@ -77,7 +76,7 @@
     background-color:  #044081;
     color: #ffffff;
   }
-  
+
   .login-p{
     position: relative;
     margin: 0px 30px;

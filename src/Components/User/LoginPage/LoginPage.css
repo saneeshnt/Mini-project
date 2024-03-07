@@ -74,10 +74,11 @@
     background-color: #044081;
     color: #ffffff;
   }
-  
+
   .signup-p{
     position: relative;
-    margin: 0px 30px;
+    margin: 0px 90px;
+    bottom:120px;
    
     
   }
@@ -86,5 +87,6 @@
     font-family: math;
     font-size:3vh;
     color: #0f0cb2;
-    margin:-20px 140px ;
+    margin: 0px 190px;
+    bottom:140px;
   }

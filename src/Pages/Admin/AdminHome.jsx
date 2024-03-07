@@ -1,9 +1,12 @@
 import React from 'react'
-import Header1 from '../../Components/Admin/Header/Header1/Header'
+import Header from '../../Components/Admin/Header/Header2/Header'
+import HomePage from '../../Components/Admin/HomePage/Homepage'
 
 function AdminHome() {
   return (
-    <div><Header1/></div>
+    <div><Header/>
+    <HomePage/>
+    </div>
   )
 }
 

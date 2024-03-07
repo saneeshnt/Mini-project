@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch,faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
-import './Header.css'; 
+import { faSearch,faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import '../../../User/Headers/Header1/Header.css'; 
 
 function Header() {
   return (
@@ -12,7 +12,7 @@ function Header() {
       <h1 className='brand-name'>PHONE!X</h1>
       </Link>
       </div>
-      <div className='headerlinks'>
+      <div className='header-links'>
         <ul>
           <Link to='/new'><li>NEW ARRIVALS</li></Link>
           <Link to='/brands'><li>BRANDS</li></Link>

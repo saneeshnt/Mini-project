@@ -23,30 +23,25 @@
 a{
   text-decoration: none;
 }
-  .headerlinks ul {
+  .header-links ul {
     list-style: none;
-    padding: 45px;
+    padding:25px;
     margin: 0px 10px;
     font-family: monospace;
-    position: relative;
+    position:relative;
     right:0em;
 }
   
-  .headerlinks ul li {
+  .header-links ul li {
     display:inline-block;
     margin:10px;
-    
-    
- }
-  
-  .headerlinks ul li {
-    color: #373030; 
+    color: #000000; 
     font-size:17px;
     font-weight: 10vh;
     cursor: pointer;
   }
   
-  .headerlinks ul li:hover {
+  .header-links ul li:hover {
     color: #044081; 
   }
   /* header-search */
@@ -68,7 +63,7 @@ a{
     padding: 6px;
     background-color:#ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius:1px;
     color: rgb(0, 0, 0);
     cursor: pointer;
     outline: none;
@@ -89,7 +84,7 @@ a{
     align-items: center;
     justify-content: space-around;
     margin: 0px 20px;
-    right: -10vh;
+    right: -8vh;
   }
   
   .header-icons > * {
@@ -112,14 +107,14 @@ a{
     padding: 5px;
 
     background-color: #fbfdfa;
-    color: rgb(0, 0, 0);
-    border: 1px solid  #000000;
+    color: #044081;
+    border: 1px solid  #044081;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
 .signup-button .btn:hover{
-  background-color: #1e1c1c;
+  background-color: #044081;
   color: #dce0e4;
 }
 

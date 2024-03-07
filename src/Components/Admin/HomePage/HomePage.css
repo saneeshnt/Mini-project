@@ -1,0 +1,48 @@
+.admin-homepage{
+    justify-content: center;
+    margin: 10px 10px;
+}
+.admin-options{
+    position: relative;
+    align-items: center;
+    display: flex;
+    border: 1px solid #040404;
+    padding: 5px 45px;
+    margin: 30px 10px;
+    width: 500px;
+    height: 75px;
+    left: 26em;
+}
+.go-button{
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 20em;
+}
+.go-button button {
+    font-weight: bold;
+    font-family: math;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    color:#044081;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border: 0.5px solid #044081;
+    cursor: pointer;
+    margin: 0px 40px;
+   
+}
+  
+  .go-button button:hover {
+    transform: scale(1.05);
+    background-color:#044081;
+    color: #ffffff;
+   
+  }
+
+  .option {
+    font-family:cursive ;
+    color: #044081;
+
+  }
