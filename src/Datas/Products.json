@@ -1,0 +1,36 @@
+{
+  "productsdata": [
+    {
+      "id": 1,
+      "name": "Samsung S24 Ultra",
+      "description": "Description of Product 1",
+      "price": 999.9,
+      "stock": 10,
+      "image": "https://i.postimg.cc/QtbJ8pxg/in-galaxy-s24-s928-sm-s928bzkcins-thumb-539573221.webp"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "Description of Product 2",
+      "price": 20.49,
+      "stock": 50,
+      "image": "path/to/product2-image.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "Description of Product 3",
+      "price": 15.79,
+      "stock": 75,
+      "image": "path/to/product3-image.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "path/to/product4-image.jpg"
+    }
+  ]
+}

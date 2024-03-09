@@ -1,45 +1,98 @@
-/* Footer.css */
+/* Footer Styles */
 
 .footer {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
-  padding: 30px 0;
+  padding: 50px 0;
 }
 
-.footerContent {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.footerColumn {
-  flex: 1;
-  padding: 0 20px;
-}
-
-.footerColumn h3 {
+.footer h4 {
+  color: #fff;
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
-.footerColumn a {
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footerColumn a:hover {
-  text-decoration: underline;
+.footer ul li a:hover {
+  color: #ccc;
 }
 
-.socialIcons {
+.footer ul li:first-child {
+  margin-top: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.socialIcons img {
-  width: 30px;
+.col-md-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+@media (max-width: 992px) {
+  .col-md-3 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Social Icons */
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons li {
+  display: inline-block;
   margin-right: 10px;
 }
 
-.footerBottom {
-  text-align: center;
-  margin-top: 20px;
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ccc;
 }

@@ -12,17 +12,7 @@ function Header() {
       <h1 className='brand-name'>PHONE!X</h1>
       </Link>
       </div>
-      <div className='headerlinks'>
-        <ul>
-       
-          <Link to='/new'><li>NEW ARRIVALS</li></Link>
-          <Link to='/brands'><li>BRANDS</li></Link>
-          <Link to='/categories'><li>CATEGORIES</li></Link>
-          <Link to='/support'><li>SUPPORT</li></Link>
-
-        </ul>
-
-      </div>
+     
 
     
       </div>

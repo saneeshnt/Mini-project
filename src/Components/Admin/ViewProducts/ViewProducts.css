@@ -1,46 +1,48 @@
-.user-list-container {
+.product-table-container {
     font-family: Arial, sans-serif;
-    margin-top: 20px;
+    margin-top: 30px 30px ;
   }
   
-  .user-list-container h2 {
+  .product-table-container h2 {
     font-size: 24px;
     margin-bottom: 10px;
   }
   
-  .user-list-table {
+  .product-table {
     width: 100%;
     border-collapse: collapse;
   }
   
-  .user-list-table th,
-  .user-list-table td {
+  .product-table th,
+  .product-table td {
     border: 1px solid #ddd;
     padding: 8px;
   }
   
-  .user-list-table th {
+  .product-table th {
     background-color: #f2f2f2;
     text-align: left;
   }
   
-  .user-list-table tr:nth-child(even) {
+  .product-table tr:nth-child(even) {
     background-color: #f2f2f2;
   }
   
-  .user-list-table tr:hover {
+  .product-table tr:hover {
     background-color: #ddd;
   }
   
-  .user-list-table button {
+  .product-table button {
     padding: 6px 12px;
+    margin-right: 5px;
     border: none;
-    background-color:#22326f;
+    background-color: #22326f;
     color: #fff;
+    border-radius: 4px;
     cursor: pointer;
   }
   
-  .user-list-table button:hover {
-    background-color: green;
+  .product-table button:hover {
+    background-color:green;
   }
   

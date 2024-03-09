@@ -5,6 +5,8 @@ import AdminLogin from "../Pages/Admin/AdminLogin";
 import AdminEditProducts from "../Pages/Admin/AdminEditProducts";
 import AdminUserList from '../Pages/Admin/AdminUserList';
 import AdminViewProducts from '../Pages/Admin/AdminViewProducts';
+import AdminAddProducts from '../Pages/Admin/AdminAddProduct';
+
 
 
 function AdminRouters() {
@@ -12,10 +14,12 @@ function AdminRouters() {
     <div>
         <Routes>
             <Route  path="/" element={<AdminLogin/>}/>
-            <Route path="/editProduct" element={<AdminEditProducts/>}/>
+            <Route path="/editProducts" element={<AdminEditProducts/>}/>
             <Route path="/home" element={<AdminHome/>}/>
-            <Route path="/userlist" element={<AdminUserList/>}/>
+            <Route path="/userlists" element={<AdminUserList/>}/>
             <Route path="/viewproducts" element={<AdminViewProducts/>}/>
+            <Route path="/addproducts" element={<AdminAddProducts/>}/>
+
             
         </Routes>
     </div>

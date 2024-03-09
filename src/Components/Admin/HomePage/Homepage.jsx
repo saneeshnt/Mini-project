@@ -27,7 +27,7 @@ function Homepage() {
       </div>
 
       <div className='go-button'>
-        <Link to="/admin/userlist">
+        <Link to="/admin/userlists">
       <button type="submit" className=''>Go</button>
       </Link>
       </div>
@@ -40,27 +40,17 @@ function Homepage() {
       </div>
 
       <div className='go-button'>
-        <Link to="/admin/editproduct">
+        <Link to="/admin/addproducts">
       <button type="submit" className=''>Go</button>
       </Link>
       </div>
 
       </div>
-      <div className='admin-options'>
-
-     < div className='option'>
-      <h2>DELETE PRODUCTS</h2>
-      </div>
-
-      <div className='go-button'>
-        <Link to="/admin/editproduct">
-      <button type="submit" className=''>Go</button>
-      </Link>
-      </div>
+   
 
       </div>
       
-      </div>
+      
     
 
     

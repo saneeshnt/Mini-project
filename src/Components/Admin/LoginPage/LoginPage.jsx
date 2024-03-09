@@ -32,7 +32,7 @@ function LoginPage() {
 
   return (
    <> <div className="admin-login-page">
-      <h1>Log in</h1>
+      <h1>Admin LogIn</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
