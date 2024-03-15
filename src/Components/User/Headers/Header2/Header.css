@@ -17,4 +17,23 @@
     letter-spacing:10px;
     color: #044081;
   }
+  a{
+    text-decoration: none;
+    }
+    .header-links2 ul {
+      list-style: none;
+      padding:25px;
+      margin: 0px 10px;
+      font-family:monospace;
+      position:relative;
+      right:35em;
+    }
+    
+    .header-links2 ul li {
+      display: inline-block;
+      margin: 0px 20px;
+      font-size: 17px;
+      cursor: pointer;
+  }
   
+    

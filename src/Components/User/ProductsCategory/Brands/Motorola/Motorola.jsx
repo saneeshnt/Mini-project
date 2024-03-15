@@ -4,19 +4,19 @@ import './Motorola.css'
 import ProductsPage from  '../../../ProductsPage/ProductsPage'
 import productsData from '../../../../../Datas/Products.json'
 
-function Apple() {
-  const moto = productsData.productsdata.filter(productsdata=>productsdata.brand==="motorola")
+function Motorola() {
+  const motorola = productsData.productsdata.filter(productsdata=>productsdata.brand==="motorola")
   return (
     <>
       <div className='brand-moto'>
         <div className='brand-moto-heading'>
-          <h1>Iphones</h1>
+          <h1>Motorola</h1>
         </div>
-        <ProductsPage products={moto} />
+        <ProductsPage products={motorola} />
       </div>
 
     </>
   )
 }
 
-export default Apple
+export default Motorola

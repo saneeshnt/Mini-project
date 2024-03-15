@@ -51,11 +51,10 @@ function Header() {
               {isCategoryOpen && (
                 <div className="dropdown-menu">
                   <ul>
-                  <li><Link to='/i'>Apple</Link></li>
-                    <li><Link to='/samsung'>Samsung</Link></li>
-                    <li><Link to='/oneplus'>OnePlus</Link></li>
-                    <li><Link to='/motorola'>Motorola</Link></li>
-                    <li><Link to='/realme'>Realme</Link></li>
+                  <li><Link to='#'>Photography</Link></li>
+                    <li><Link to='#'>Videography</Link></li>
+                    <li><Link to='#'>Gaming</Link></li>
+                    <li><Link to='#'>Battery</Link></li>
                   </ul>
                 </div>
               )}

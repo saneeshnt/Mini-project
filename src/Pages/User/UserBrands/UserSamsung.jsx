@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Samsung from '../../../Components/User/ProductsCategory/Brands/Samsung/Samsung'
-import Header from '../../../Components/User/Headers/Header2/Header'
+import Header from '../../../Components/User/Headers/Header3/Header'
 import Footer from '../../../Components/User/Footer/Footer'
 
 
