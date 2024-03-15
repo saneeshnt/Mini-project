@@ -1,5 +1,5 @@
 import React from 'react'
-import Apple from '../../../Components/User/ProductsPage/Brands/Apple/Apple'
+import Apple from '../../../Components/User/ProductsCategory/Brands/Apple/Apple'
 import Header from '../../../Components/User/Headers/Header2/Header'
 import Footer from '../../../Components/User/Footer/Footer'
 

@@ -2,6 +2,7 @@ import React from "react";
 import "../../../Components/User/SignupPage/SignupPage.css";
 import { Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { signup } from "../../../Services/UserApi";
 
 
 const InitialValues = {
@@ -40,10 +41,11 @@ const ValidateForm = (values) => {
 
 const SignupPage=()=> {
 
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = async(values) => {
     console.log(values);
-    setSubmitting(false);
+     const {data} = await signup(values );
   };
+
 
   return (
     <>

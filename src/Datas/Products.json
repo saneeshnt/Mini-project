@@ -6,31 +6,114 @@
       "description": "Description of Product 1",
       "price": 999.9,
       "stock": 10,
-      "image": "https://i.postimg.cc/QtbJ8pxg/in-galaxy-s24-s928-sm-s928bzkcins-thumb-539573221.webp"
+      "image": "https://i.postimg.cc/QtbJ8pxg/in-galaxy-s24-s928-sm-s928bzkcins-thumb-539573221.webp",
+      "brand": "Samsung",
+      "category": "Photography",
+      "date": "2024-02-29"
     },
     {
       "id": 2,
-      "name": "Product 2",
+      "name": "Samsung S24+",
       "description": "Description of Product 2",
       "price": 20.49,
       "stock": 50,
-      "image": "path/to/product2-image.jpg"
+      "image": "https://i.postimg.cc/5tD6gCR5/in-galaxy-s24-plus-sm-s926bzvbins-thumb-539572979.webp",
+      "brand": "Samsung",
+      "category": "Category 2",
+      "date": "2024-02-29"
+
     },
     {
       "id": 3,
-      "name": "Product 3",
+      "name": "Samsung S23 Ultra",
       "description": "Description of Product 3",
       "price": 15.79,
       "stock": 75,
-      "image": "path/to/product3-image.jpg"
+      "image": "https://i.postimg.cc/HLJsKLGp/in-galaxy-s23-s918-sm-s918bzgcins-thumb-534863401.webp",
+      "brand": "Samsung",
+      "category": "Category 3",
+      "date": "2024-02-29"
+
     },
     {
       "id": 4,
-      "name": "Product 4",
+      "name": "Samsung S23 FE",
       "description": "Description of Product 4",
       "price": 30.99,
       "stock": 25,
-      "image": "path/to/product4-image.jpg"
+      "image": "https://i.postimg.cc/W1YfzNdq/in-galaxy-s23-fe-s711-479553-sm-s711bzpcins-thumb-538356069.webp",
+      "brand": "Samsung",
+      "category": "No Category",
+      "date": "2024-02-29"
+
+    },
+    {
+      "id": 5,
+      "name": "Samsung S24",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "https://i.postimg.cc/R0DYqMbb/in-galaxy-s24-492654-sm-s921bzkcins-thumb-539572764.webp",
+      "brand": "Samsung",
+      "category": "No Category",
+      "date": "2024-02-29"
+
+    },
+    {
+      "id": 6,
+      "name": "OnePlus 11R",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "https://i.postimg.cc/qMYgcFZh/unnamed.webp",
+      "brand": "OnePlus",
+      "category": "No Category",
+      "date": "2024-02-29"
+
+    },
+    {
+      "id": 7,
+      "name": "OnePlus 10 PRO",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "https://i.postimg.cc/mgvvS3sy/unnamed-1.webp",
+      "brand": "OnePlus",
+      "category": "No Category",
+      "date": "2024-02-29"
+       
+    },
+    {
+      "id":8,
+      "name": "OnePlus 10R",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "https://i.postimg.cc/pdXndj9R/unnamed-2.webp",
+      "brand" : "OnePlus",
+      "category": "No Category"
+    },
+    {
+      "id":9,
+      "name": "iphone 15",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "https://i.postimg.cc/5N1bBg1N/15.webp",
+      "brand" : "apple",
+      "category": "No Category"
+    },
+    {
+      "id":10,
+      "name": "iphone 15",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "https://i.postimg.cc/5N1bBg1N/15.webp",
+      "brand" : "apple",
+      "category": "No Category"
     }
   ]
+   
 }
+    

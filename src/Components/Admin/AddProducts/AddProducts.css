@@ -11,7 +11,7 @@
   
   .add-product-container form {
     max-width: 400px;
-    margin-top: 20px;
+    margin-top:30px 30px;
   }
   
   .add-product-container label {

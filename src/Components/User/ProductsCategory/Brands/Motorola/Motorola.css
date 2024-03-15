@@ -1,0 +1,22 @@
+.brand-moto {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  background-color: #f0f0f045;
+}
+
+.brand-moto-heading{
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 768px){
+
+  .brand-moto{
+      padding-top: 200px;
+  }
+
+  .brand-moto-heading{
+      margin-left: 90px;
+  }
+}

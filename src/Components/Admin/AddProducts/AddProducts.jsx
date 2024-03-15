@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddProducts.css';
+import '../AddProducts/AddProducts.css';
 
 const AddProducts = () => {
   const [productData, setProductData] = useState({
@@ -8,7 +8,7 @@ const AddProducts = () => {
     price: '',
     stock: '',
     image: '',
-    brand: '' // New brand field
+    brand: ''  
   });
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ const AddProducts = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic to submit product data to the backend
+    // logic to submit product data to the backend
     console.log('Product data:', productData);
     // Reset form after submission
     setProductData({
