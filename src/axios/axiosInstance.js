@@ -1,9 +1,9 @@
 import axios from "axios"
 const userInstance =axios.create({
-    baseURL:"http://localhost:8080/"
+    baseURL:"http://localhost:8000/"
 });
 const adminInstance = axios.create({
-    baseURL:"http://localhost:8080/admin/"
+    baseURL:"http://localhost:8000/admin/"
 
 }) 
 

@@ -3,61 +3,49 @@ import "../../../Components/User/SignupPage/SignupPage.css";
 import { Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { signup } from "../../../Services/UserApi";
+import * as yup from "yup"
 
 
-const InitialValues = {
-  username: "",
-  email: "",
-  password: "",
-  confirmPassword: ""
-};
-
-const ValidateForm = (values) => {
-  const errors = {};
-
-  if (!values.email) {  errors.email = "Required";}
-  if (!/\S+@\S+\.\S+/.test(values.email)) {
-    errors.email = "Email is not valid";
+function SignupPage(){
+  const nav=useNav()
+  const initialValues={
+    name:"",
+    email:"",
+    password:"",
+    confirmPassword:""
   }
-  if(!values.username){errors.username="Username required"}
-  else if(values.username.length<5){errors.username="Must be at least 5 characters long.";}
+  const validationSchema=yup.object().shape({
+    name: yup.string().required("username is required"),
+    email: yup.string().email("Invalid Email").required("Email is Required"),
+    password : yup.string().min(6,"password should be at least 6 characters long")
+                        .required("Please enter your Password"),
+    confirmPassword : yup.string().oneOf([yup.ref('password'), null], "Passwords must match")
+                        .required("Confirm Your Password")
+  })
+  const onSubmit=async (values)=>{
+    console.log(values)
+    const {data}=await signup(values)
+  }
+  const formik=useFormik({
+    initialValues,
+    validationSchema,
+    onsubmit,
+  })
 
- 
- 
-  if(!values.password){errors.password="password required"}
- else if (!(values.password.length >= 8)) {
-    errors.password = "must be at least 8 characters";
+  const goTologin=()=>{
+    nav('/login')
   }
 
- 
-   if (values.password !== values.confirmPassword) {
-    errors.confirmPassword = "doesn't match the password";
-  }
-
-  return errors;
-};
-
-
-
-const SignupPage=()=> {
-
-  const handleSubmit = async(values) => {
-    console.log(values);
-     const {data} = await signup(values );
-  };
+  
 
 
   return (
     <>
       <div className='signup-page'>
         <h1>Sign Up</h1>
-        <Formik
-          initialValues={InitialValues}
-          onSubmit={handleSubmit}
-          validate={ValidateForm}
-        >
+       
           {({ isSubmitting }) => (
-            <Form>
+            <Form onSubmit={formik.handleSubmit}>
 
               <div className='signup-form'>
                 <div className='brand-name'>
@@ -66,36 +54,60 @@ const SignupPage=()=> {
 
 
                 <div className='form-group'>
-                  <Field
-                    type='email'
-                    name='email'
-                    placeholder='Email'
-                  />
-                  <ErrorMessage name="email" component="div" />
+                 <input type="text"
+                 name="email"
+                 id="signupEmail"
+                 placeholder="enter your email address"
+                 value={formik.values.email}
+                 onChange={formik.handleChange}
+                 onBlur={formik.handleBlur} />
+                 {formik.touched.email&&formik.errors.email&&(
+                  <p className="error-msg"
+                  style={{color:'red'}}>{formik.errors.email}</p>
+
+                 )}
                 </div>
                 <div className='form-group'>
-                  <Field
-                    type='text'
-                    name='username'
-                    placeholder='Username'
-                  />
-                  <ErrorMessage name="username" component="div" />
+                <input type="text"
+                 name="name"
+                 id="signupName"
+                 placeholder="enter your username"
+                 value={formik.values.name}
+                 onChange={formik.handleChange}
+                 onBlur={formik.handleBlur} />
+                 {formik.touched.name&&formik.errors.name&&(
+                  <p className="error-msg"
+                  style={{color:'red'}}>{formik.errors.name}</p>
+                  )}
+
                 </div>
                 <div className='form-group'>
-                  <Field
-                    type='password'
-                    name='password'
-                    placeholder='Password'
-                  />
-                  <ErrorMessage name="password" component="div" />
+                <input type="text"
+                 name="password"
+                 id="signupPassword"
+                 placeholder="enter your password"
+                 value={formik.values.password}
+                 onChange={formik.handleChange}
+                 onBlur={formik.handleBlur} />
+                 {formik.touched.password&&formik.errors.password&&(
+                  <p className="error-msg"
+                  style={{color:'red'}}>{formik.errors.password}</p>
+                 )}
+
                 </div>
                 <div className='form-group'>
-                  <Field
-                    type='password'
-                    name='confirmPassword'
-                    placeholder='Confirm Password'
-                  />
-                  <ErrorMessage name="confirmPassword" component="div" />
+                <input type="text"
+                 name="email"
+                 id="signupEmail"
+                 placeholder="enter your email address"
+                 value={formik.values.email}
+                 onChange={formik.handleChange}
+                 onBlur={formik.handleBlur} />
+                 {formik.touched.email&&formik.errors.email&&(
+                  <p className="error-msg"
+                  style={{color:'red'}}>{formik.errors.email}</p>
+                 )}
+
                 </div>
                 <div className='signup-btn'>
                   <button type='submit' disabled={isSubmitting}>Sign Up</button>
