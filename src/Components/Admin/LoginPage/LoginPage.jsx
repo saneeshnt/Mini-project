@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../Components/Admin/LoginPage/LoginPage.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Link, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { login } from '../../../Services/AdminApi'
 
