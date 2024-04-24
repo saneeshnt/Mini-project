@@ -1,9 +1,14 @@
 import React from 'react';
 import '../../../Components/Admin/LoginPage/LoginPage.css';
+
 import { useFormik } from 'formik';
+
 import * as Yup from 'yup';
+
 import {useNavigate } from 'react-router-dom';
+
 import { toast } from 'react-toastify';
+
 import { login } from '../../../Services/AdminApi'
 
 
@@ -25,9 +30,9 @@ function LoginPage() {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        console.log("On Submit !!!");
+        console.log("On submit!")
         const { data } = await login(values);
-        console.log(data, "Admin Return Data !!!");
+        console.log(data, "Admin Return Data!");
         if (data.created) {
           localStorage.setItem("jwt", data.token);
           toast.success("Login Success", { position: "top-right" });
@@ -60,8 +65,17 @@ function LoginPage() {
               className="mail"
               value={formik.values.email}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             />
-            {formik.errors.email && <div className="error">{formik.errors.email}</div>}
+            {formik.touched.email && formik.errors.email && (
+              <p
+               className='error-msg'
+               style={{marginTop:"5px",color:"red"}}
+              
+              >
+                {formik.errors.email}
+              </p>
+            ) }
           </div>
           <div className="form-group">
             <input
@@ -72,8 +86,17 @@ function LoginPage() {
               className="pswd"
               value={formik.values.password}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             />
-            {formik.errors.password && <div className="error">{formik.errors.password}</div>}
+            {formik.touched.password && formik.errors.password && (
+              <p
+              className='"error-msg'
+              style={{marginTop:'5px',
+                      color:"red" }}
+                      >
+                        {formik.errors.password}
+                      </p>
+            ) }
           </div>
           <div className='login-btn'>
             <button type="submit">Log in</button>
