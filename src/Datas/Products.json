@@ -8,7 +8,7 @@
       "stock": 10,
       "image": "https://i.postimg.cc/QtbJ8pxg/in-galaxy-s24-s928-sm-s928bzkcins-thumb-539573221.webp",
       "brand": "Samsung",
-      "category": "Photography",
+      "category": "photography",
       "date": "2024-02-29"
     },
     {
@@ -19,7 +19,7 @@
       "stock": 50,
       "image": "https://i.postimg.cc/5tD6gCR5/in-galaxy-s24-plus-sm-s926bzvbins-thumb-539572979.webp",
       "brand": "Samsung",
-      "category": "Category 2",
+      "category": "photography",
       "date": "2024-02-29"
 
     },
@@ -31,7 +31,7 @@
       "stock": 75,
       "image": "https://i.postimg.cc/HLJsKLGp/in-galaxy-s23-s918-sm-s918bzgcins-thumb-534863401.webp",
       "brand": "Samsung",
-      "category": "Category 3",
+      "category": "photography",
       "date": "2024-02-29"
 
     },
@@ -67,7 +67,7 @@
       "stock": 25,
       "image": "https://i.postimg.cc/qMYgcFZh/unnamed.webp",
       "brand": "OnePlus",
-      "category": "No Category",
+      "category": "gaming",
       "date": "2024-02-29"
 
     },
@@ -79,7 +79,7 @@
       "stock": 25,
       "image": "https://i.postimg.cc/mgvvS3sy/unnamed-1.webp",
       "brand": "OnePlus",
-      "category": "No Category",
+      "category": "gaming",
       "date": "2024-02-29"
        
     },
@@ -91,7 +91,9 @@
       "stock": 25,
       "image": "https://i.postimg.cc/pdXndj9R/unnamed-2.webp",
       "brand" : "OnePlus",
-      "category": "No Category"
+      "category": "gaming",
+      "date": "2024-02-29"
+
     },
     {
       "id":9,
@@ -101,7 +103,9 @@
       "stock": 25,
       "image": "https://i.postimg.cc/5N1bBg1N/15.webp",
       "brand" : "apple",
-      "category": "No Category"
+      "category": "photography",
+      "date": "2024-02-29"
+
     },
     {
       "id":10,
@@ -111,8 +115,24 @@
       "stock": 25,
       "image": "https://i.postimg.cc/5N1bBg1N/15.webp",
       "brand" : "apple",
-      "category": "No Category"
+      "category": "photography",
+      "date": "2024-02-29"
+
+    },
+    {
+      "id":11,
+      "name": "iphone 15",
+      "description": "Description of Product 4",
+      "price": 30.99,
+      "stock": 25,
+      "image": "https://i.postimg.cc/5N1bBg1N/15.webp",
+      "brand" : "apple",
+      "category": "photography",
+      "date": "2024-02-29"
+
     }
+    
+
   ]
    
 }

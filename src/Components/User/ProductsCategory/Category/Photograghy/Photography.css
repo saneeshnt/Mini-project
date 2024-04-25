@@ -1,0 +1,23 @@
+.category-photography {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    background-color: #f0f0f045;
+  }
+  
+  .category-photography-heading{
+    margin-left: 50px;
+  }
+  
+  @media only screen and (max-width: 768px){
+  
+    .category-photography{
+        padding-top: 200px;
+    }
+  
+    .category-photography-heading{
+        margin-left: 90px;
+    }
+  }
+ 

@@ -25,7 +25,7 @@ function Header() {
             <h1 className='brand-name'>PHONE!X</h1>
           </Link>
         </div>
-        <div className='header-links'>
+        <div className='header-options'>
           <ul>
             <li><Link to='/new'>NEW ARRIVALS</Link></li>
             <li className="dropdown">
@@ -51,10 +51,9 @@ function Header() {
               {isCategoryOpen && (
                 <div className="dropdown-menu">
                   <ul>
-                  <li><Link to='#'>Photography</Link></li>
-                    <li><Link to='#'>Videography</Link></li>
-                    <li><Link to='#'>Gaming</Link></li>
-                    <li><Link to='#'>Battery</Link></li>
+                  <li><Link to='/camera'>PHOTOGRAPHY</Link></li>
+                    <li><Link to='/gaming'>GAMING</Link></li>
+                    <li><Link to='/battery'>BATTERY</Link></li>
                   </ul>
                 </div>
               )}

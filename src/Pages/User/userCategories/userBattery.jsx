@@ -1,16 +1,17 @@
 import React from 'react'
-import Motorola from '../../../Components/User/ProductsCategory/Brands/Motorola/Motorola'
 import Header from '../../../Components/User/Headers/Header2/Header'
+import Battery from '../../../Components/User/ProductsCategory/Category/Battery/Battery'
 import Footer from '../../../Components/User/Footer/Footer'
 
-function UserMotorola() {
+function userBattery() {
   return (
     <div>
       <Header/>
-      <Motorola/>
+      <Battery/>
       <Footer/>
+
     </div>
   )
 }
 
-export default UserMotorola
+export default userBattery

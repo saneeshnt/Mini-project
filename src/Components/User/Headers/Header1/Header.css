@@ -22,7 +22,7 @@
  a{
   text-decoration: none;
   }
-  .header-links ul {
+  .header-options ul {
     list-style: none;
     padding:25px;
     margin: 0px 10px;
@@ -31,7 +31,7 @@
     right:0em;
   }
   
-  .header-links ul li {
+  .header-options ul li {
     display: inline-block;
     margin: 0px 5px;
     font-size: 17px;

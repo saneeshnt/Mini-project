@@ -1,6 +1,5 @@
 import React from 'react'
 import './Apple.css'
-// import ProductsPage from '../../../ProductsPage/ProductsPage'
 // import { Link } from 'react-router-dom'
 import ProductsPage from  '../../../ProductsPage/ProductsPage'
 import productsData from '../../../../../Datas/Products.json'
