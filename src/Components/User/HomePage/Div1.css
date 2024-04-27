@@ -1,0 +1,47 @@
+.homepage {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+    display: none;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .gesture-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 20px;
+    transition: background 0.3s;
+  }
+  
+  .gesture-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  

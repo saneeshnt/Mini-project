@@ -11,13 +11,13 @@ function HomePage() {
           alt="ads1" />
         <img className='img2' src="https://i.postimg.cc/tRzvmPR8/One-Plus-Open-Foldable-Phone-Set-To-Launch-In-India-On.jpg"
           alt="ads2" />
-        <img className='img3' src="https://i.postimg.cc/LXC10HH1/istockphoto-1302676710-2048x2048-result.png"
+        <img className='img3' src="https://i.postimg.cc/1zhdpWkp/240-F-307827215-2-Nfyb-Xbw-YN0acd-MEt3-Vk-WJy3-QRj-Yvfsn.jpg"
           alt="ads3" />
-          {/* <img className='img4' src="https://i.postimg.cc/hGyxxtHw/istockphoto-1163987892-170667a.webp" 
-          alt="ads4" /> */}
+         
       </div>
       <div className='contents'>
-        <h2>Welcome to phone!X<br/> "your ultimate destination for the latest in smartphones!"</h2>
+        <h2>Welcome to phone!X<br/> "your ultimate destination <br/>
+        for the latest in smartphones!"</h2>
        
       </div>
       <div  className='buttons'>

@@ -11,9 +11,10 @@ import UserApple from '../Pages/User/UserBrands/UserApple';
 import UserOnePlus from '../Pages/User/UserBrands/UserOnePlus';
 import UserRealme from '../Pages/User/UserBrands/UserRealme';
 import UserMotorola from '../Pages/User/UserBrands/UserMotorola';
-import UserGaming from "../Pages/User/userCategories/userGaming"
-import UserBattery from "../Pages/User/userCategories/userBattery"
+import UserGaming from "../Pages/User/userCategories/userGaming";
+import UserBattery from "../Pages/User/userCategories/userBattery";
 import UserPhotography from '../Pages/User/userCategories/userPhotography';
+import UserSingleProduct from "../Pages/User/UserSingleProduct";
 
 
 
@@ -36,13 +37,8 @@ function UserRouters() {
             <Route path="/gaming" element={<UserGaming/>}/>
             <Route path="/battery" element={<UserBattery/>}/>
             <Route path="/camera" element={<UserPhotography/>}/>
-
-
-
-            
-
-
-
+            <Route path="/singlepage"  element={<UserSingleProduct/>}/>
+          
 
         </Routes>
        

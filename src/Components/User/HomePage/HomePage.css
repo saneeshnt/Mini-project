@@ -1,5 +1,7 @@
 .HomePage {
     text-align: center;
+    margin-bottom: -165px;
+
   }
   
   .ads {
@@ -31,24 +33,25 @@
     font-family:serif;
     justify-content:left;
     text-shadow: black;
-    top:-22em;
-
+    top: -17em;
+    right: 12em;
   }
   
   .explore-button{
-    position: relative;
-    width: 30vh;
-    height:5vh;
+      position: relative;
+    width: 58vh;
+    height: 7vh;
     color: rgb(255, 255, 255);
-    background-color: rgb(19, 18, 18);
-    border:2px solid  rgb(255, 255, 255);
+    background-color: rgb(30 93 132);
+    border: 0px solid rgb(230 230 230);
     box-sizing: border-box;
-    border-radius: 20px;
-    font-size:20px;
+    border-radius: 3px;
+    font-size: 20px;
     text-align: center;
     margin: 0px 0px;
     padding: 0px 0px;
-    top: -40vh;
+    top: -74vh;
+    right: 19.3em;
     cursor: pointer;
     
   }

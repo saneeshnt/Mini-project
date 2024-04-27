@@ -28,13 +28,14 @@
  
   
   .signup-form {
+    background-image: url('https://i.postimg.cc/MHXTy0N8/elegant-smartphone-composition-23-2149437085.jpg');
     position: relative;
     align-items: center;
     width: 350px;
     height:70vh;
     padding:25px 50px  ;
     background-color:#ffffff;
-    border: 1px solid #000000;
+    border: 0px solid #000000;
     border-radius: 0px;
     /* box-shadow: 0px 10px 10px #000000; */
   }
@@ -88,6 +89,6 @@
     position: relative;
     font-family: math;
     font-size:3vh;
-    color: #0f0cb2;
-    margin:-20px 145px ;
+    color: #ffffff;
+    margin:-30px 145px ;
   }

@@ -12,18 +12,7 @@ function Header() {
           <h1 className='brand-name'>PHONE!X</h1>
         </Link>
       </div>
-      <div className="header-links">
-        <ul>
-          <li><Link to='/i'>Apple</Link></li>
-          <li><Link to='/samsung'>Samsung</Link></li>
-          <li><Link to='/oneplus'>OnePlus</Link></li>
-          <li><Link to='/motorola'>Motorola</Link></li>
-          <li><Link to='/realme'>Realme</Link></li>
-        </ul>
-      </div>
-
-
-
+    
     </div>
     </>
 
