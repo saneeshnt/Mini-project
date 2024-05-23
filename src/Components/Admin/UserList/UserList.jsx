@@ -1,59 +1,74 @@
 import React, { useState, useEffect } from 'react';
 import './UserList.css'; 
-import usersData from '../../../Datas/Users.json';
+// import usersData from '../../../Datas/Users.json';
+import {userList} from '../../../Services/AdminApi'
 
-const UserList = () => {
-  const [users, setUsers] = useState([]);
+function UserList(){
+
+ const [users, setUsers] = useState([]);
+  const [totalUsers, setTotalUsers] = useState(0);
+
+  const fetchData = async () => {
+    const {data} = await userList();
+    if(data.status) {
+      setUsers(data.UserList);
+      setTotalUsers(data.UserList.length);
+    } else {
+      console.log("error");
+    }
+  };
 
   useEffect(() => {
-    setUsers(usersData.usersdata); 
+    fetchData();
   }, []);
 
-  const handleBlockUser = (userId) => {
- 
-    console.log('Blocking user with ID:', userId);
-  };
-
-  const handleUnblockUser = (userId) => {
-    
-    console.log('Unblocking user with ID:', userId);
-  };
 
   return (
-    <div className="user-list-container">
-      <h2>User List</h2>
-      <table className="user-list-table">
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Joined Date</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.role}</td>
-              <td>{user.joinedDate}</td>
-              <td>
-                {user.isBlocked ? (
-                  <button onClick={() => handleUnblockUser(user.id)}>Unblock</button>
-                ) : (
-                  <button onClick={() => handleBlockUser(user.id)}>Block</button>
-                )}
-              </td>
+    <>
+      <div className="adminHome">
+        <h1>User List</h1>
+        <h3>
+          Total Users: {totalUsers}
+        </h3>
+        <div className="adminUserTable">
+        <table className="userListTable">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user.username}>
+                <td>{user.username}</td>
+                <td>{user.email}</td>
+                <td>
+                  {user.blockStatus ? (
+                    <button
+                      className="adminUserListBlock"
+                      onClick={() => handleBlockToggle(user.id)}
+                    >
+                      Unblock
+                    </button>
+                  ) : (
+                    <button
+                      className="adminUserListBlock"
+                      onClick={() => handleBlockToggle(user.id)}
+                    >
+                      Block
+                    </button>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </>
   );
-};
+}
 
 export default UserList;
