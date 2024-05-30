@@ -15,7 +15,7 @@ export const Products =(value)=>{
 //get
 
 export const userList = () => {
-    return adminInstance.get("/");
+    return adminInstance.get("/userlist");
 };
 
 export const viewProducts = () => {

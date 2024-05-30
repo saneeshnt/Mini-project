@@ -13,6 +13,7 @@ function AddProducts() {
     price: '',
     stock: '',
     category: '',
+    dateAdded:"",
     image: '',
   };
 
@@ -23,10 +24,12 @@ function AddProducts() {
     stock: Yup.number().required('Stock is required').min(0, 'Stock cannot be negative'),
     brand: Yup.string().required('Brand is required'),
     category: Yup.string().required('Category is required'),
-    image: Yup.string().url('Invalid URL').required('Image URL is required')
+    dateAdded: Yup.string().required("DateAdded is required"),
+    image: Yup.string().url('Invalid URL').required('Image URL is required'),
   });
 
   const onSubmit = async (values) => {
+
     try {
       const response = await Products(values);
       const { data } = response;
@@ -165,6 +168,28 @@ function AddProducts() {
             )}
           </div>
           <br />
+          <div className='addProductInputDiv'>
+            <label>Date Added</label>
+            <input
+            type='text'
+            name='dateAdded'
+            value={formik.values.dateAdded}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            placeholder='yyyy-mm-dd'
+            />
+            {formik.touched.dateAdded && formik.errors.dateAdded &&
+            (
+              <p 
+              className='error-message'
+              style={{ marginTop: "5px", color: "red" }}
+              >
+                {formik.errors.dateAdded}
+              </p>
+            )}
+
+            <br/>
+          </div>
           <div className="addProductInputDiv">
             <label>Image URL</label>
             <input
