@@ -1,56 +1,141 @@
-import React, { useState, useEffect } from 'react';
-import '../ViewProducts/ViewProducts.css'; 
-import productsdata from '../../../Datas/Products.json'; 
+import React, { useEffect, useState } from "react";
+import "./ViewProducts.css";
+import { useNavigate } from "react-router-dom";
+import SampleImg from "../../../Assets/Images/apple.jpg";
+import {
+  deleteProduct,
+  disableProduct,
+  viewProducts,
+} from "../../../Services/AdminApi";
+import Empty from "../../User/Empty/Empty";
 
-const ViewProducts = () => {
-  const [products, setProducts] = useState([]);
+
+function ViewProducts() {
+  const [productsData, setProductsData] = useState([]);
+  const [productsLength, setProductsLength] = useState(0);
+  const [disabledProducts, setDisabledProducts] = useState(0);
+  const navigate = useNavigate();
+
+  const handleEdit = (productId) => {
+    navigate(`/admin/editproducts/${productId}`);
+  };
+
+  const handleDisable = async (productId) => {
+    try {
+      await disableProduct(productId);
+      setProductsData((prevProducts) =>
+        prevProducts.map((product) =>
+          product._id === productId
+            ? { ...product, disableProduct: !product.disableProduct }
+            : product
+        )
+      );
+    } catch (error) {
+      console.error("Error toggling product status:", error);
+    }
+  };
+
+  const handleDelete = async (productId) => {
+    try {
+      await deleteProduct(productId);
+      setProductsData((prevProducts) =>
+        prevProducts.filter((product) => product._id !== productId)
+      );
+    } catch (error) {
+      console.error("Error deleting product : ", error);
+    }
+  };
+
+  const fetchData = async () => {
+    try {
+      const { data } = await viewProducts();
+      if (data.status) {
+        setProductsData(data.ViewProducts);
+        setProductsLength(data.ViewProducts.length);
+        setDisabledProducts(
+          data.ViewProducts.filter((products) => products.disableProduct).length
+        );
+      } else {
+        console.error("Error fetching products:", data.message);
+      }
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
 
   useEffect(() => {
-    setProducts(productsdata.productsdata);
-  }, []);
+    fetchData();
+  }, [productsData]);
 
-  const handleEditProduct = (productId) => {
-    console.log('Editing product with ID:', productId);
-  };
 
-  const handleDeleteProduct = (productId) => {
-    console.log('Deleting product with ID:', productId);
-  };
+  if (productsData.length === 0) {
+    return <Empty message="No Products Available" />
+  }
 
   return (
-    <div className="product-table-container">
-      <h2>Product Table</h2>
-      <table className="product-table">
+    <div className="adminProducts">
+      <h1 className="productsHeading">All Products</h1>
+      <h3 className="totalProducts">Total Products: {productsLength}</h3>
+      <h3 className="disabledProducts">Total Disabled Products: {disabledProducts}</h3>
+
+      <table className="proTable">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Image</th> {/* New column for product images */}
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th>Action</th>
+            <th className="image">Image</th>
+            <th className="name">Name</th>
+            <th className="description">Description</th>
+            <th className="category">Category</th>
+            <th className="stock">Stock</th>
+            <th className="price">Price</th>
+            <th className="actions">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {products.map(product => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td><img src={product.image} alt={product.name} className="product-image" /></td> {/* Display product image */}
-              <td>{product.name}</td>
-              <td>{product.description}</td>
-              <td>${product.price.toFixed(2)}</td>
-              <td>{product.stock}</td>
-              <td>
-                <button onClick={() => handleEditProduct(product.id)}>Edit</button>
-                <button onClick={() => handleDeleteProduct(product.id)}>Delete</button>
-              </td>
-            </tr>
-          ))}
+          {productsData.map((product) => {
+            const imageURL = product.image
+              ? `http://localhost:8000/public/images/products/${product.image}`
+              : SampleImg;
+            return (
+              <tr key={product._id}>
+                <td className="image">
+                  <img
+                    src={imageURL}
+                    alt="Product"
+                    className="productImg"
+                  />
+                </td>
+                <td className="name">{product.name}</td>
+                <td className="description">{product.description}</td>
+                <td className="category">{product.category}</td>
+                <td className="stock">{product.stock}</td>
+                <td className="price">₹{product.price}</td>
+                <td className="actions">
+                  <button
+                    onClick={() => handleEdit(product._id)}
+                    className="editBtn"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => handleDisable(product._id)}
+                    className={product.disableProduct ? "disableBtn" : "enableBtn"}
+                  >
+                    {product.disableProduct ? "Enable" : "Disable"}
+                  </button>
+                  <button
+                    onClick={() => handleDelete(product._id)}
+                    className="deleteBtn"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
   );
-};
+}
 
-export default ViewProducts;
+export default ViewProducts

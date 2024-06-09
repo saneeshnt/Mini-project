@@ -1,58 +1,62 @@
-.adminHome{
-  margin: 100px 20px;
+/* UserList.css */
+
+.adminHome {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.adminHome h1{
-  margin: 20px 0px;
+.adminHome h1,
+.adminHome h3 {
+  text-align: center;
+  color: #333;
 }
 
-.adminHome h3{
-  margin: 10px 0px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: end;
+.adminUserTable {
+  margin-top: 20px;
 }
 
-.adminUserTable{
-  display: flex;
-  justify-content: center;
-}
-
-.userListTable{
+.userListTable {
   width: 100%;
   border-collapse: collapse;
-}
-
-.userListTable th, .userListTable td {
-  border : 1px solid #ddd;
-  padding: 8px;
-}
-
-.userListTable th{
-  background-color: #f2f2f2;
+  margin: 20px 0;
+  font-size: 18px;
   text-align: left;
 }
 
-.userListTable tbody tr:nth-child(even){
+.userListTable thead tr {
   background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
 }
 
-.userListTable tbody tr:hover{
-  background-color: #ddd;
+.userListTable th,
+.userListTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.userListTable tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.userListTable tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.userListTable tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
 }
 
 .adminUserListBlock {
-  width: 50%;
-  height: 30px;
+  padding: 10px 20px;
   border: none;
-  background-color: #ff5a5a;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
-  font-size: 15px;
-  font-family: sans-serif;
   cursor: pointer;
 }
 
-.adminUserListBlock:hover{
-  background-color: #ff3e3e;
+.adminUserListBlock:hover {
+  opacity: 0.9;
 }

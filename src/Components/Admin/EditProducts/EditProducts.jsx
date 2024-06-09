@@ -1,131 +1,166 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import productsData from '../../../Datas/Products.json'
-import './EditProducts.css'
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getProductById, updateProduct } from "../../../Services/AdminApi";
+import "./EditProducts.css";
 
-function EditProduct() {
-  const [product, setProduct] = useState({ id: '', name: '', stock: '', brand: '', description: '', price: 0, category: '' });
-  const { productId } = useParams();
+
+function EditProducts() {
+  const { id } = useParams();
   const navigate = useNavigate();
+  const [product, setProduct] = useState({
+    name: "",
+    brand: "",
+    description: "",
+    price: "",
+    stock:"",
+    category: "Photography",
+    disableProduct: false,
+    image: "",
+  });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    // Find the product with the matching productId
-    const foundProduct = productsData.Products.find(item => item.id === parseInt(productId));
-    if (foundProduct) {
-      setProduct(foundProduct);
-    }
-  }, [productId]);
+    getProductById(id)
+      .then((response) => {
+        setProduct(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching product:", error); // Debugging statement
+        setError("There was an error fetching the product!");
+        setLoading(false);
+      });
+  }, [id]);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setProduct({ ...product, [name]: value });
-  }
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setProduct((prevProduct) => ({
+      ...prevProduct,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle the submission of the edited product details
-    console.log("Updated Product:", product);
-    // Redirect or perform any necessary actions after submission
-    navigate('/admin/view'); // For example, navigate to the products page
+    // Remove the 'image' field from the product object
+    const { image, ...updatedProduct } = product;
+    updateProduct(id, updatedProduct)
+      .then((response) => {
+        navigate("/admin/viewproducts"); // Redirect to the products list page
+      })
+      .catch((error) => {
+        setError("There was an error updating the product!");
+      });
   };
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
   return (
-    <div className='adminEditProduct'>
+    <div className="editProduct">
       <h1>Edit Product</h1>
       <div className="editProductSection">
-        <form onSubmit={handleSubmit}>
-          <div className="editProductInputDiv">
-            <label>ID</label>
-            <input
-              type="number"
-              name="id"
-              value={product.id}
-              onChange={handleInputChange}
-              placeholder="ENTER PRODUCT ID..."
-              id="input"
-            />
-          </div>
-          <br />
-          <div className="editProductInputDiv">
-            <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              value={product.name}
-              onChange={handleInputChange}
-              placeholder="ENTER NAME HERE..."
-              id="input"
-            />
-          </div>
-
-          <br />
-          <div className="editProductInputDiv">
-            <label>Brand</label>
-            <select
-              name="brand"
-              value={product.brand}
-              onChange={handleInputChange}
-              id="input"
-            >
-              <option value="iphone">iphone</option>
-              <option value="Samsung">Samsung</option>
-              <option value="Motoorla">Motorola</option>
-              <option value="OnePlus">OnePlus</option>
-              <option value="Realme">Realme</option>
-
-            </select>
-          </div>
-
-          <br />
-          <div className="editProductInputDiv">
-            <label>Description</label>
-            <textarea
-              name="description"
-              value={product.description}
-              onChange={handleInputChange}
-              placeholder="PRODUCT DESCRIPTION..."
-              id="input"
-            />
-          </div>
-
-          <br />
-          <div className="editProductInputDiv">
-            <label>Price</label>
-            <input
-              type="number"
-              name="price"
-              value={product.price}
-              onChange={handleInputChange}
-              placeholder="ENTER PRICE HERE ..."
-              id="input"
-            />
-          </div>
-
-
-
-          <br />
-          <div className="editProductInputDiv">
-            <label>Category</label>
-            <select
-              name="category"
-              value={product.category}
-              onChange={handleInputChange}
-              id="input"
-            >
-              <option value="photgraphy">Photography</option>
-              <option value="gaming">Gaming</option>
-              <option value="battery">Battery</option>
-            </select>
-          </div>
-
-          <br />
-          <button type="submit" id="editProductBtn">
-            Save Changes
-          </button>
-        </form>
+      <form onSubmit={handleSubmit}>
+        <div className="editProductInputDiv">
+          <label htmlFor="name" className="label">
+           Product Name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={product.name}
+            onChange={handleChange}
+            className="input-field"
+            required
+          />
+        </div>
+        <div className="editProductInputDiv">
+          <label htmlFor="brand" className="label">
+            Brand:
+          </label>
+          <input
+            type="text"
+            id="brand"
+            name="brand"
+            value={product.brand}
+            onChange={handleChange}
+            className="input-field"
+            required
+          />
+        </div>
+        <div className="editProductInputDiv">
+          <label htmlFor="description" className="label">
+            Description:
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            value={product.description}
+            onChange={handleChange}
+            className="input-field"
+            required
+          />
+        </div>
+        <div className="editProductInputDiv">
+          <label htmlFor="price" className="label">
+            Price:
+          </label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            value={product.price}
+            onChange={handleChange}
+            className="input-field"
+            required
+          />
+        </div>
+        <div className="editProductInputDiv">
+          <label htmlFor="stock" className="label">
+            Stock:
+          </label>
+          <input
+            type="number"
+            id="stock"
+            name="stock"
+            value={product.stock}
+            onChange={handleChange}
+            className="input-field"
+            required
+          />
+        </div>
+        
+        <div className="editProductInputDiv">
+          <label htmlFor="category" className="label">
+            Category:
+          </label>
+          <select
+            id="category"
+            name="category"
+            value={product.category}
+            onChange={handleChange}
+            className="input-field"
+          >
+            <option value="photography">Photography</option>
+            <option value="battery">Battery</option>
+            <option value="gaming">Gaming</option>
+          </select>
+        </div>
+        <button type="submit" id="editProductBtn">
+          Save Changes
+        </button>
+      </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EditProduct;
+
+export default EditProducts

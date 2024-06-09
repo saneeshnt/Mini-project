@@ -37,7 +37,7 @@ function UserRouters() {
             <Route path="/gaming" element={<UserGaming/>}/>
             <Route path="/battery" element={<UserBattery/>}/>
             <Route path="/camera" element={<UserPhotography/>}/>
-            <Route path="/singlepage"  element={<UserSingleProduct/>}/>
+            <Route path="/singlepage/:productId"  element={<UserSingleProduct/>}/>
           
 
         </Routes>

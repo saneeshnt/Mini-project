@@ -1,66 +1,76 @@
-.singleproduct {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.singleProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
 }
 
-.topsection {
-    display: flex;
-    justify-content: space-between;
+.singleProduct__top {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80%;
+  max-width: 1200px;
 }
 
-.img-section {
-    flex: 1;
+.singleProduct__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
 }
 
-.img {
-    /* Your styles for the product image */
-    width: 100%;
-    height: 200px; /* Adjust as needed */
-    background-color: #ddd; /* Placeholder background color */
-    border-radius: 5px;
+.singleProduct__image img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: cover;
 }
 
-.details-section {
-    flex: 2;
-    padding: 0 20px;
-    box-sizing: border-box;
+.singleProduct__details {
+  flex: 1;
+  padding: 20px;
 }
 
-.details-name h1 {
-    margin-top: 0;
+.singleProduct__name {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-.details-name h3 {
-    color: #666;
+.singleProduct__brand {
+  font-size: 1.5em;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-.details-name p {
-    margin-top: 10px;
+.singleProduct__description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-.buttons {
-    margin-top: 20px;
+.singleProduct__price {
+  font-size: 2em;
+  color: #e60023;
+  margin-bottom: 20px;
 }
 
-.btn {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+.singleProduct__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #e60023;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.details-price h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
+.singleProduct__btn:hover {
+  background-color: #c2001a;
 }

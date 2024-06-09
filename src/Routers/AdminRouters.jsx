@@ -18,7 +18,7 @@ function AdminRouters() {
             <Route path="/userlists" element={<AdminUserList/>}/>
             <Route path="/viewproducts" element={<AdminViewProducts/>}/>
             <Route path="/addproducts" element={<AdminAddProducts/>}/>
-            <Route path="/editproducts" element={<AdminEditProducts/>}/>
+            <Route path="/editproducts/:id" element={<AdminEditProducts/>}/>
             
 
             

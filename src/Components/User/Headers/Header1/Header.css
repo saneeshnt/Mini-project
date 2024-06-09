@@ -1,4 +1,4 @@
-.Header {
+/ .Header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -134,6 +134,4 @@
 .signup-button .btn:hover{
 background-color: #044081;
 color: #dce0e4;
-}
-
- 
+} 

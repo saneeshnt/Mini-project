@@ -1,16 +1,21 @@
-.add-product-container {
-  max-width: 600px;
+/* AddProducts.css */
+
+/* General Styles */
+.addProduct {
+  width: 90vw;
+  /* max-width: 600px; */
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+  top: 50px;
 }
 
-.add-product-container h2 {
+.addProduct h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
 }
 
 .addProductSection {
@@ -19,68 +24,92 @@
 }
 
 .addProductInputDiv {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .addProductInputDiv label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #333;
 }
 
 .addProductInputDiv input,
-.addProductInputDiv select,
-.addProductInputDiv textarea {
+.addProductInputDiv textarea,
+.addProductInputDiv select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.addProductInputDiv input[type="text"],
-.addProductInputDiv input[type="number"],
-.addProductInputDiv textarea {
-  height: 40px;
+  font-size: 16px;
 }
 
 .addProductInputDiv textarea {
-  height: 100px;
   resize: vertical;
+  min-height: 100px;
 }
 
-.addProductInputDiv select {
-  height: 40px;
+.addProductInputDiv input[type="file"] {
+  padding: 3px;
 }
 
 .error-message {
-  margin-top: 5px;
   color: red;
+  font-size: 14px;
 }
 
 #AddProductBtn {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-#AddProductBtn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-#AddProductBtn:hover:enabled {
+#AddProductBtn:hover {
   background-color: #0056b3;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .add-product-container {
+  .addProduct {
+    padding: 15px;
+  }
+
+  .addProductInputDiv input,
+  .addProductInputDiv textarea,
+  .addProductInputDiv select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #AddProductBtn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addProduct {
     padding: 10px;
+  }
+
+  .addProductInputDiv label {
+    font-size: 14px;
+  }
+
+  .addProductInputDiv input,
+  .addProductInputDiv textarea,
+  .addProductInputDiv select {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  #AddProductBtn {
+    padding: 6px;
+    font-size: 12px;
   }
 }

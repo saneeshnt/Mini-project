@@ -1,48 +1,59 @@
-import React from 'react';
-import '../AddProducts/AddProducts.css';
+import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
-import { Products } from "../../../Services/AdminApi";
+import "./AddProducts.css";
+
+import { Products } from "../../../Services/AdminApi"; // Correct import path
+
+
 
 function AddProducts() {
   const initialValues = {
-    name: '',
-    brand: '',
-    description: '',
-    price: '',
-    stock: '',
-    category: '',
-    dateAdded:"",
-    image: '',
+    name: "",
+    brand: "",
+    description: "",
+    price: "",
+    stock:"",
+    // dateAdded: "",
+    category: "photography",
+    image: null, // Add image field to initial values
   };
 
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required('Name is required'),
-    description: Yup.string().required('Description is required'),
-    price: Yup.number().required('Price is required').positive('Price must be positive'),
-    stock: Yup.number().required('Stock is required').min(0, 'Stock cannot be negative'),
-    brand: Yup.string().required('Brand is required'),
-    category: Yup.string().required('Category is required'),
-    dateAdded: Yup.string().required("DateAdded is required"),
-    image: Yup.string().url('Invalid URL').required('Image URL is required'),
+    name: Yup.string().required("Name is required"),
+    brand: Yup.string().required("Brand name is required"),
+    description: Yup.string().required("Description is required"),
+    price: Yup.number().required("Price is required"),
+    stock: Yup.number().required("stock is required"),
+    category: Yup.string().required("category is required"),
+
+
+
+    // dateAdded: Yup.string().required("Date Added is required"),
   });
 
   const onSubmit = async (values) => {
+    const formData = new FormData();
+    formData.append("name", values.name);
+    formData.append("brand", values.brand);
+    formData.append("description", values.description);
+    formData.append("price", values.price);
+    formData.append("stock", values.stock);
+    // formData.append("dateAdded", new Date(values.dateAdded).toISOString());
+    formData.append("category", values.category);
+    formData.append("image", values.image); // Append image to form data
 
-    try {
-      const response = await Products(values);
-      const { data } = response;
+    const response = await Products(formData);
+    console.log(response);
 
-      if (!data) {
-        toast.error('Failed to add product');
-      } else if (data.name) {
-        toast.success(`${data.name} product added successfully`);
-      } else {
-        toast.success('Product has been added successfully');
-      }
-    } catch (error) {
-      toast.error('An error occurred while adding the product');
+    const { data, error } = response;
+    if (error) {
+      toast.error(error);
+    } else if (data) {
+      toast.success(`${data.name || "Product"} has been added`);
+    } else {
+      toast.error("Failed to add product");
     }
   };
 
@@ -52,13 +63,17 @@ function AddProducts() {
     onSubmit,
   });
 
+  const handleFileChange = (e) => {
+    formik.setFieldValue("image", e.currentTarget.files[0]);
+  };
+
   return (
-    <div className="add-product-container">
-      <h2>Add Product</h2>
-      <form onSubmit={formik.handleSubmit}>
-        <div className="addProductSection">
+    <div className="addProduct">
+      <h1>Add Product</h1>
+      <div className="addProductSection">
+        <form onSubmit={formik.handleSubmit} encType="multipart/form-data">
           <div className="addProductInputDiv">
-            <label>Name</label>
+            <label>Product Name</label>
             <input
               type="text"
               name="name"
@@ -68,8 +83,31 @@ function AddProducts() {
               placeholder="ENTER NAME HERE..."
             />
             {formik.touched.name && formik.errors.name && (
-              <p className="error-message" style={{ marginTop: '5px', color: 'red' }}>
+              <p
+                className="error-message"
+                style={{ marginTop: "5px", color: "red" }}
+              >
                 {formik.errors.name}
+              </p>
+            )}
+          </div>
+          <br />
+          <div className="addProductInputDiv">
+            <label>Brand</label>
+            <input
+              type="text"
+              name="brand"
+              value={formik.values.brand}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="ENTER BRAND HERE..."
+            />
+            {formik.touched.brand && formik.errors.brand && (
+              <p
+                className="error-message"
+                style={{ marginTop: "5px", color: "red" }}
+              >
+                {formik.errors.brand}
               </p>
             )}
           </div>
@@ -84,7 +122,10 @@ function AddProducts() {
               placeholder="PRODUCT DESCRIPTION..."
             />
             {formik.touched.description && formik.errors.description && (
-              <p className="error-message" style={{ marginTop: '5px', color: 'red' }}>
+              <p
+                className="error-message"
+                style={{ marginTop: "5px", color: "red" }}
+              >
                 {formik.errors.description}
               </p>
             )}
@@ -101,7 +142,10 @@ function AddProducts() {
               placeholder="ENTER PRICE HERE ..."
             />
             {formik.touched.price && formik.errors.price && (
-              <p className="error-message" style={{ marginTop: '5px', color: 'red' }}>
+              <p
+                className="error-message"
+                style={{ marginTop: "5px", color: "red" }}
+              >
                 {formik.errors.price}
               </p>
             )}
@@ -118,35 +162,16 @@ function AddProducts() {
               placeholder="ENTER STOCK HERE ..."
             />
             {formik.touched.stock && formik.errors.stock && (
-              <p className="error-message" style={{ marginTop: '5px', color: 'red' }}>
+              <p
+                className="error-message"
+                style={{ marginTop: "5px", color: "red" }}
+              >
                 {formik.errors.stock}
               </p>
             )}
           </div>
           <br />
-          <div className="addProductInputDiv">
-            <label>Brand</label>
-            <select
-              name="brand"
-              value={formik.values.brand}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            >
-              <option value="">Select Brand</option>
-              <option value="iphone">iphone</option>
-              <option value="Samsung">Samsung</option>
-              <option value="Motorola">Motorola</option>
-              <option value="OnePlus">OnePlus</option>
-              <option value="Realme">Realme</option>
-
-            </select>
-            {formik.touched.brand && formik.errors.brand && (
-              <p className="error-message" style={{ marginTop: '5px', color: 'red' }}>
-                {formik.errors.brand}
-              </p>
-            )}
-          </div>
-          <br />
+         
           <div className="addProductInputDiv">
             <label>Category</label>
             <select
@@ -155,65 +180,25 @@ function AddProducts() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             >
-              <option value="">Select Category</option>
-              <option value="Photography">Photgraphy</option>
-              <option value="Gaming">Gaming</option>
-              <option value="Battery">Battery</option>
-             
+              <option value="photograpgy">Photography</option>
+              <option value="battery">Battery</option>
+              <option value="gaming">Gaming</option>
             </select>
-            {formik.touched.category && formik.errors.category && (
-              <p className="error-message" style={{ marginTop: '5px', color: 'red' }}>
-                {formik.errors.category}
-              </p>
-            )}
           </div>
           <br />
-          <div className='addProductInputDiv'>
-            <label>Date Added</label>
-            <input
-            type='text'
-            name='dateAdded'
-            value={formik.values.dateAdded}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            placeholder='yyyy-mm-dd'
-            />
-            {formik.touched.dateAdded && formik.errors.dateAdded &&
-            (
-              <p 
-              className='error-message'
-              style={{ marginTop: "5px", color: "red" }}
-              >
-                {formik.errors.dateAdded}
-              </p>
-            )}
-
-            <br/>
-          </div>
           <div className="addProductInputDiv">
-            <label>Image URL</label>
-            <input
-              type="text"
-              name="image"
-              value={formik.values.image}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              placeholder="ENTER IMAGE URL HERE ..."
-            />
-            {formik.touched.image && formik.errors.image && (
-              <p className="error-message" style={{ marginTop: '5px', color: 'red' }}>
-                {formik.errors.image}
-              </p>
-            )}
+            <label>Image</label>
+            <input type="file" name="image" onChange={handleFileChange} />
           </div>
           <br />
           <button type="submit" id="AddProductBtn">
             Add Product
           </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
 
-export default AddProducts;
+
+export default AddProducts

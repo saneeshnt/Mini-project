@@ -34,7 +34,7 @@ function LoginPage() {
         const { data } = await login(values);
         console.log(data, "Admin Return Data!");
         if (data.created) {
-          localStorage.setItem("jwt", data.token);
+          localStorage.setItem("adminjwt", data.token);
           toast.success("Login Success", { position: "top-right" });
           navigate("/admin/home");
         } else {

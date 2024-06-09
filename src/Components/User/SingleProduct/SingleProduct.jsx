@@ -1,42 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import "./SingleProduct.css";
-import { useParams } from 'react-router-dom';
-import productData from "../../../Datas/Products.json";
+import { useParams } from "react-router-dom";
+import { getProductDetails } from "../../../Services/UserApi";
 
 function SingleProduct() {
-    const { productId } = useParams();
-    // Ensure productId is parsed as an integer
-    const product = productData.Products.find(productdatas => productdatas.id === parseInt(productId, 10));
+  const { productId } = useParams();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    // Check if product exists before rendering
-    if (!product) {
-        return <div>Product not found</div>;
+  const fetchProductDetails = async (productId) => {
+    try {
+      const response = await getProductDetails(productId);
+      const { status, product, message } = response.data;
+      if (status) {
+        setProduct(product);
+      } else {
+        setError(message || "Failed to load product details.");
+      }
+    } catch (error) {
+      setError("An error occurred while fetching the product details.");
+    } finally {
+      setLoading(false);
     }
+  };
 
-    return (
-        <div className="singleproduct">
-            <div className="topsection">
-                <div className="img-section">
-                    {/* Assuming you'll put image here */}
-                    <div className="img" id="img"></div>
-                </div>
-                <div className="details-section">
-                    <div className="details-name">
-                        <h1>{product.name}</h1>
-                        <h3>{product.brand}</h3>
-                        <p>{product.description}</p>
-                        <div className="buttons">
-                            <button className="btn" id="btn1">Add to Cart</button>
-                            <button className="btn" id="btn2">Buy Now</button>
-                        </div>
-                    </div>
-                    <div className="details-price">
-                        <h2>₹{product.price}</h2>
-                    </div>
-                </div>
-            </div>
+  useEffect(() => {
+    if (productId) {
+      fetchProductDetails(productId);
+    }
+  }, [productId]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    console.log(error);
+    return <div>Error: {error}</div>;
+  }
+
+  const baseURL = "http://localhost:8000"; // Replace with your actual base URL
+  const imageURL = `${baseURL}/public/images/products/${product.image}`;
+
+  return (
+    <div className="singleProduct">
+      <div className="singleProduct__top">
+        <div className="singleProduct__image">
+          <img src={imageURL} alt={product.name} />
         </div>
-    );
+        <div className="singleProduct__details">
+          <h1 className="singleProduct__name">{product.name}</h1>
+          <h3 className="singleProduct__brand">{product.brand}</h3>
+          <p className="singleProduct__description">{product.description}</p>
+          <div className="singleProduct__price">₹{product.price}</div>
+          <button className="singleProduct__btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default SingleProduct;
