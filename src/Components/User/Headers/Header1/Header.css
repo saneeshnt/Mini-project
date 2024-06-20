@@ -118,7 +118,7 @@
     color: #de0606;
 
   } */
-.signup-button .btn {
+.login-button .btn {
   position: relative;
   right: 4vh;
   width:auto;
@@ -131,7 +131,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.signup-button .btn:hover{
+.login-button .btn:hover{
 background-color: #044081;
 color: #dce0e4;
 } 

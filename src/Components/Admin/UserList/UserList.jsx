@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./UserList.css";
 import { blockUser, userList } from "../../../Services/AdminApi";
-import Empty from "../../Admin/Empty/Empty";
+// import Empty from "../../Admin/Empty/Empty";
 
 
 function UserList() {

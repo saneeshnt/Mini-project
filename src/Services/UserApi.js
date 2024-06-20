@@ -3,9 +3,9 @@ import { userInstance } from "../axios/axiosInstance"
 
 //post
 
-// export const createOrder = (orderData) => {
-//     return userInstance.post("/createorder", { ...orderData });
-//   };
+export const createOrder = (orderData) => {
+    return userInstance.post("/createorder", { ...orderData });
+  };
   
 
 
@@ -18,6 +18,9 @@ export const login=(value)=>{
     return userInstance.post('/login', {...value})
 }
 
+export const AddToWishlist = (productId) => {
+  return userInstance.post("/wishlist", { productId });
+};
 
 //get methods
 
@@ -31,15 +34,15 @@ export const latestArrivals = () => {
 
 
 
-  // export const userStatus = () => {
-  //   return userInstance
-  //     .get("/auth/status")
-  //     .then((response) => response.data)
-  //     .catch((error) => {
-  //       console.error("Error fetching user status:", error);
-  //       return { user: null };
-  //     });
-  // };
+  export const userStatus = () => {
+    return userInstance
+      .get("/auth/status")
+      .then((response) => response.data)
+      .catch((error) => {
+        console.error("Error fetching user status:", error);
+        return { user: null };
+      });
+  };
 
 
 
@@ -82,4 +85,8 @@ export const latestArrivals = () => {
 
   export const photography=()=>{
     return userInstance.get("/photography")
+  }
+
+  export const checkProductInWishlist = (productId) => {
+    return userInstance.get(`/wishlist/check/${productId}`);
   }
