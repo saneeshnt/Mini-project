@@ -104,6 +104,10 @@ export const latestArrivals = () => {
   }
 
 
+  export const getCart = () => {
+    return userInstance.get("/cart");
+  }
+
   //delete
 
   export const removeFromWishlist = (productId) => {

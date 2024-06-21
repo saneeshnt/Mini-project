@@ -260,6 +260,19 @@
   background-color: #044081;
   color: #fff;
 }
+.wishlist-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ff4d4d;
+  margin-right: 10px;
+}
+
+.wishlist-btn:hover {
+  color: #e60000;
+}
+
 
 /* Responsive styles */
 

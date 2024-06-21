@@ -1,7 +1,7 @@
-.singleProduct {
-  max-width: auto;
-  margin:5em 5em;
-  padding: 20px 20px;
+/* .singleProduct {
+  max-width: 1200px;
+  margin: 5em auto;
+  padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -9,25 +9,29 @@
 
 .singleProduct__top {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .singleProduct__image {
-  flex: 1;
+  flex: 1 1 100%;
+  max-width: 500px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .singleProduct__image img {
   width: 100%;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .singleProduct__details {
-  flex: 2;
+  flex: 2 1 100%;
 }
 
 .singleProduct__name {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #333333;
   margin-bottom: 10px;
@@ -40,7 +44,7 @@
 }
 
 .singleProduct__description {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #666666;
   margin-bottom: 20px;
 }
@@ -54,24 +58,22 @@
 .sinPrdQuantity button {
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid rgb(255, 255, 255);
-  /* border-radius:10px; */
-  padding: 10px;
-  font-size: 1.4rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sinPrdQuantity button:hover {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid black;
-  border-radius: 100px;
+  background-color: #05791a;
+  color: #ffffff;
 }
 
 .sinPrdQuantity span {
   font-size: 1.6rem;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .singleProduct__price {
@@ -91,17 +93,17 @@
   background-color: #ffffff;
   color: #000000;
   border: 1px solid black;
-  border-radius: 100px;
+  border-radius: 8px;
   padding: 12px 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
 }
 
 .sinPrdBtn:hover {
   background-color: #05791a;
   color: #ffffff;
-  border: 1px solid black;
 }
 
 @media (max-width: 768px) {
@@ -110,6 +112,164 @@
   }
 
   .singleProduct__image {
-    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .sinPrdQuantity button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .sinPrdQuantity span {
+    font-size: 1.4rem;
+  }
+
+  .singleProduct__price,
+  .singleProduct__totalPrice {
+    font-size: 1.8rem;
+  }
+
+  .sinPrdBtn {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+} */
+
+
+
+.singleProduct {
+  max-width: 1200px;
+  margin: 5em auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.singleProduct__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.singleProduct__image {
+  flex: 1 1 100%;
+  max-width: 500px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.singleProduct__image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.singleProduct__details {
+  flex: 2 1 100%;
+}
+
+.singleProduct__name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.singleProduct__brand {
+  font-size: 1.4rem;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.singleProduct__description {
+  font-size: 1.2rem;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.sinPrdQuantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sinPrdQuantity button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sinPrdQuantity button:hover {
+  background-color: #05791a;
+  color: #ffffff;
+}
+
+.sinPrdQuantity span {
+  font-size: 1.6rem;
+  margin: 0 15px;
+}
+
+.singleProduct__price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.singleProduct__totalPrice {
+  font-size: 1.6rem;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.sinPrdBtn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+}
+
+.sinPrdBtn:hover {
+  background-color: #05791a;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .singleProduct__top {
+    flex-direction: column;
+  }
+
+  .singleProduct__image {
+    margin-right: 0;
+  }
+
+  .sinPrdQuantity button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .sinPrdQuantity span {
+    font-size: 1.4rem;
+  }
+
+  .singleProduct__price,
+  .singleProduct__totalPrice {
+    font-size: 1.8rem;
+  }
+
+  .sinPrdBtn {
+    font-size: 1rem;
+    padding: 10px 16px;
   }
 }
