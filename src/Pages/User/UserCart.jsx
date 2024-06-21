@@ -3,7 +3,9 @@ import Header from '../../Components/User/Headers/Header1/Header'
 
 function UserCart() {
   return (
-    <div><Header/></div>
+    <div><Header/>
+  
+    </div>
   )
 }
 

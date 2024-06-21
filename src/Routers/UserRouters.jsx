@@ -15,6 +15,8 @@ import UserGaming from "../Pages/User/userCategories/userGaming";
 import UserBattery from "../Pages/User/userCategories/userBattery";
 import UserPhotography from '../Pages/User/userCategories/userPhotography';
 import UserSingleProduct from "../Pages/User/UserSingleProduct";
+import UserWishList from '../Pages/User/UserWishList';
+// import errorPage from "../Pages/User/errorPage"
 
 
 
@@ -38,6 +40,10 @@ function UserRouters() {
             <Route path="/battery" element={<UserBattery/>}/>
             <Route path="/camera" element={<UserPhotography/>}/>
             <Route path="/singlepage/:productId"  element={<UserSingleProduct/>}/>
+            <Route path='*' element={<errorPage/>}/>
+            <Route path='/wishlist' element={<UserWishList/>}/>
+
+
           
 
         </Routes>

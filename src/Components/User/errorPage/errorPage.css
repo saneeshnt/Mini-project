@@ -1,0 +1,29 @@
+/* errorPage.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6; /* Light background for better contrast */
+    font-family: Arial, sans-serif;
+  }
+  
+  .error {
+    text-align: center;
+  }
+  
+  .error h1 {
+    font-size: 5em; /* Large font size for emphasis */
+    color: #ff6347; /* Tomato color for the 404 */
+    margin: 0;
+  }
+  
+  .error h1 span {
+    display: block;
+    font-size: 2em; /* Slightly smaller for the "PAGE NOT FOUND" text */
+    color: #333; /* Darker color for the text */
+  }
+  
